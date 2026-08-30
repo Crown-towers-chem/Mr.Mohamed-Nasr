@@ -1,0 +1,635 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Mohamed Abd El-Hakim Nasr</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201063383676" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01063383676
+    </a>
+    <a href="https://wa.me/+201063383676" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Unit 1 - Part 1 (Lessons 1 & 2)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        
+        /* Hero */
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        
+        /* Toolbar */
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🏥</span><h1>Unit 1: My Day in the Hospital & Emergency Call</h1><p class="sub">Sec 1 - Part 1 (Lessons 1 & 2)</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container" id="mainContainer"></main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+// ===================== دوال مساعدة =====================
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+// ===================== محتوى الوحدة (بترتيب الصور) =====================
+
+// 1. Key Vocabulary (صورة 1)
+const keyVocab = [
+    ["administer (v) (ed)", "يدير/يعطي دواء"],
+    ["attention (n)", "انتباه/اهتمام"],
+    ["beep (n) (v) (ed)", "صوت صفير/يصدر صفيراً"],
+    ["buzz (n) (v) (ed)", "صوت طنين/يطن/يصحب"],
+    ["chaos (n)", "فوضى"],
+    ["chest (n)", "صدر"],
+    ["collapse (v) (d)", "انهيار/ينهار"],
+    ["consciousness (n)", "وعي/ضمير"],
+    ["CPR (n)", "إنعاش قلبي رئوي"],
+    ["emergency (n)", "طوارئ"],
+    ["grab (v) (bed)", "يمسك بقوة"],
+    ["heartbreaking (adj)", "محزن/مفجع"],
+    ["kick off (v) (ed)", "انطلاق/يبدأ ب"],
+    ["medication (n)", "دواء"],
+    ["paramedic (n)", "مسعف"],
+    ["pulse (n)", "نبض"],
+    ["rewarding (adj)", "مجزٍ/مربح"],
+    ["rollercoaster (n)", "موقف متغير/قطار الموت"],
+    ["shift (n) (v) (ed)", "مناوبة/عمل/يحول"],
+    ["victim (n)", "ضحية"]
+];
+
+// 2. Vocabulary on Reading & Listening (صورة 1 - أسفل)
+const l1l2Vocab = [
+    ["activity (n)", "نشاط"], ["affect (v) (ed)", "يؤثر على"],
+    ["alarm (n)", "إنذار/منبه"], ["anxiously (adv)", "بشكل متوتر"],
+    ["arise (v)", "يَنشأ/يَبرز"], ["assist (v) (ed)", "يساعد"],
+    ["career (n)", "مهنة/حياة مهنية"], ["challenge (v) (d)", "يتحدى"],
+    ["chart (n)", "مخطط/سجل"], ["check (v) (ed)", "يفحص/يتحقق من"],
+    ["colleague (n)", "زميل عمل"], ["compression (n)", "ضغط"],
+    ["complain (v) (ed)", "يشكو"], ["condition (n)", "حالة/شرط/حالة بدنية"],
+    ["confusion (n)", "ارتباك"], ["crime (n)", "جريمة"],
+    ["critical (adj)", "خطر/حَيِّد"], ["details (n)", "تفاصيل"],
+    ["disorder (n)", "اضطراب/خلل/فوضى"], ["dizzy (adj)", "شاعر بدوار/مُصابٌ بالدوار"],
+    ["document (v) (ed)", "وثيقة/يُوثِّق"], ["duty (n)", "واجب/وظيفة"],
+    ["emotional (adj)", "عاطفي"], ["ensure (v) (d)", "يَضْمَن"],
+    ["experience (n)", "تجربة/خبرة"], ["first aid (n)", "إسعافات أولية"],
+    ["fulfilled (adj)", "راضٍ/مكتف"], ["handle (v) (d)", "يتعامل مع"],
+    ["head (v) (ed)", "يتوجه/يقود"], ["hold on (v)", "ينتظر/يتشبث"],
+    ["lifeguard (n)", "منقذ"], ["medical (adj)", "طبي"],
+    ["mentally (adv)", "عقلياً"], ["monitor (n) (v) (ed)", "شاشة/يراقب"],
+    ["neighborhood (n)", "جِوار/حي سكني"], ["never-ending (adj)", "مستمر/غير منتهٍ"],
+    ["nursing (n)", "التمريض"], ["operator (n)", "عامل تشغيل"],
+    ["pain (n)", "ألم"], ["perform (v) (ed)", "يؤدي"],
+    ["pleasure (n)", "سرور/متعة"], ["preparation (n)", "تحضير"],
+    ["press (n) (v) (ed)", "ضغط/يضغط"], ["procedure (n)", "إجراء"],
+    ["progress (v) (ed) (n)", "يتقدم/تقدّم"], ["quality (n)", "جودة"],
+    ["randomly (adv)", "بشكل عشوائي"], ["recover (v) (ed)", "يتعافى"],
+    ["regain (v) (ed)", "يستعيد"], ["regular (adj)", "منتظم"],
+    ["relieve (v) (d)", "يخفف"], ["rescue (v) (d) (n)", "إنقاذ"],
+    ["rest (n) (v) (ed)", "راحة/يستريح"], ["review (n) (v) (ed)", "مراجعة/يراجع"],
+    ["run (v)", "يدير/يُشغِّل"], ["rush (v) (ed)", "اندفاع/يندفع"],
+    ["satisfaction (n)", "رضا/قناعة"], ["situation (n)", "موقف"],
+    ["state (n)", "حالة"], ["sudden (adj)", "مفاجئ"],
+    ["support (n) (v) (ed)", "دعم/يدعم"], ["surgery (n)", "جراحة"],
+    ["task (n)", "مهمة"], ["trade (n) (v) (d)", "تجارة/تبادل"],
+    ["treatment (n)", "علاج"], ["typical (adj)", "نموذجي/تقليدي"],
+    ["updates (n)", "تحديثات"], ["witness (v) (ed) (n)", "شاهد/يشهد"],
+    ["wrist (n)", "معصم اليد"]
+];
+
+// 3. Phrases, Expressions & Idioms (صورة 2)
+const phrasesData = [
+    ["a set period of time", "فترة زمنية محددة"],
+    ["(be) rushed in", "يُدفع للداخل"],
+    ["call for an ambulance", "يتصل بالإسعاف"],
+    ["give emergency care", "يُقدّم الرعاية الطارئة"],
+    ["go the extra mile", "يبذل جهداً إضافياً"],
+    ["have a sharp pain", "يشعر بألم حاد"],
+    ["make sure", "يتأكد من"],
+    ["make the dream work", "يحقق الحلم/النجاح"],
+    ["No pain, no gain", "لا كسب بدون ألم"],
+    ["prepare for challenges ahead", "يستعد للتحديات المقبلة"],
+    ["remain calm", "يحافظ على الهدوء"],
+    ["spring into action", "يبدأ العمل فوراً"]
+];
+
+// 4. Prepositions (صورة 2)
+const prepositionsData = [
+    ["administer ... to", "يدير... لـ"],
+    ["aware of", "مدرك/ملم بـ"],
+    ["break out", "يندلع (حريق/صراع)"],
+    ["buzz with", "يعج بـ/يمتلئ بـ"],
+    ["care for", "يعتني بـ/يهتم بـ"],
+    ["fall down", "يسقط"],
+    ["feeling of", "شعور بـ"],
+    ["focus on", "يركز على"],
+    ["recover from", "يتعافى من"],
+    ["reflect on", "يتأمل/يفكر في"],
+    ["rely on", "يعتمد على"]
+];
+
+// 5. Derivatives (صورة 2 - مع الأمثلة)
+const derivativesData = [
+    {word: "administer", forms: ["administer (v) → administration/administrator (n)", "administrative (adj)"], ex: "The nurse administered the injection. / The hospital administration made changes."},
+    {word: "assist", forms: ["assist (v) → assistance/assistant (n)", "-"], ex: "She assisted the doctor. / I need your assistance with this task."},
+    {word: "attend", forms: ["attend (v) → attention (n)", "attentive (adj)"], ex: "He attended the meeting. / Please pay attention to the instructions. / She is an attentive listener."},
+    {word: "collapse", forms: ["collapse (v) → collapse (n)", "collapsible/collapsed (adj)"], ex: "The building collapsed. / The collapse was sudden. / It's a collapsible chair."},
+    {word: "confuse", forms: ["confuse (v) → confusion (n)", "confusing/confused (adj)"], ex: "Don't confuse the patients. / The situation caused confusion. / The instructions were confusing."},
+    {word: "perform", forms: ["perform (v) → performance/performer (n)", "performing (adj)"], ex: "He performed the surgery. / Her performance was excellent. / It's a performing arts school."},
+    {word: "progress", forms: ["progress (v) → progression/progression (n)", "progressive (adj)"], ex: "The team is progressing. / The progression of the disease."},
+    {word: "recover", forms: ["recover (v) → recovery (n)", "recovered/recoverable (adj)"], ex: "She recovered quickly. / The recovery took time. / The lost data is recoverable."},
+    {word: "relieve", forms: ["relieve (v) → relief/reliever (n)", "relieving/relieved (adj)"], ex: "The medicine will relieve the pain. / We felt relief. / He seemed relieved."},
+    {word: "satisfy", forms: ["satisfy (v) → satisfaction (n)", "satisfying/satisfied (adj)"], ex: "The work satisfied him. / Job satisfaction is important. / The results were satisfying."}
+];
+
+// 6. Synonyms & Antonyms (صورة 2 - أسفل)
+const synAntData = [
+    {word: "arise", syn: "emerge/appear/rise", ant: "decline/disappear"},
+    {word: "chaos", syn: "disorder/confusion", ant: "order/harmony"},
+    {word: "collapse", syn: "fall/crumble/deteriorate", ant: "stand/endure/bear"},
+    {word: "confusion", syn: "disorder/perplexity", ant: "clarity/understanding"},
+    {word: "critical", syn: "decisive/serious/vital", ant: "minor/insignificant"},
+    {word: "grab", syn: "seize/snatch", ant: "release/leave"},
+    {word: "handle", syn: "manage/control", ant: "neglect/mismanage"},
+    {word: "never-ending", syn: "endless/infinite", ant: "limited/temporary"},
+    {word: "pleasure", syn: "enjoyment/delight", ant: "pain/displeasure"},
+    {word: "randomly", syn: "haphazardly/unpredictably", ant: "systematically/predictably"},
+    {word: "rewarding", syn: "fulfilling/satisfying", ant: "unsatisfying/unsatisfactory"},
+    {word: "satisfaction", syn: "pleasure/fulfillment", ant: "discontent/frustration"},
+    {word: "sudden", syn: "abrupt/unexpected", ant: "gradual/expected"}
+];
+
+// 7. Reading Text (صورة 3)
+const readingText = [
+    {en: "Sarah kicks off her day with a cup of coffee before her 12-hour shift begins.", ar: "تبدأ سارة يومها بفنجان قهوة قبل بدء نوبة عملها التي تبلغ 12 ساعة."},
+    {en: "Sarah's first task is administering medication to her patients.", ar: "أول مهمة لسارة هي إعطاء الدواء للمرضى."},
+    {en: "Some have been waiting anxiously, while others are resting quietly.", ar: "البعض كان ينتظر بتوتر، بينما كان الآخرون يستريحون بهدوء."},
+    {en: "By midday, emergencies arise—a car accident victim is rushed in, and the team springs into action.", ar: "بحلول منتصف النهار، تظهر حالات طوارئ - يتم إسعاف ضحية حادث سيارة، ويفعل الفريق الفعل."},
+    {en: "Sarah has checked on all her patients and documented their progress.", ar: "تكون سارة قد اطمأنت على جميع مرضها وسجلت تقدمهم."},
+    {en: "She feels exhausted but fulfilled.", ar: "شعرت بالإرهاق ولكن بالرضا."},
+    {en: "Nursing is a never-ending rollercoaster, but Sarah wouldn't trade it for anything.", ar: "التمريض هو قطار لا ينتهي (من الصعود والهبوط)، لكن سارة لن تستبدله بأي شيء."}
+];
+
+// 8. Listening Text (صورة 4)
+const listeningText = [
+    {en: "Emergency operator: Emergency call 122. What's your emergency?", ar: "متلقي طوارئ: طوارئ 122. ما هي حالة الطوارئ؟"},
+    {en: "Caller: My neighbor has collapsed. He was walking downstairs when he suddenly grabbed his chest and fell down.", ar: "المتصل: جاري قد انهار. كان يمشي على السلم عندما أمسك فجأة بصدره وسقط."},
+    {en: "Operator: Have you checked his pulse?", ar: "هل فحصت نبضه؟"},
+    {en: "Caller: His pulse has been checked, but he hasn't been breathing.", ar: "نبضه تم فحصه، ولكنه لم يتنفس."},
+    {en: "Operator: So, CPR has been started.", ar: "إذن، تم بدء الإنعاش القلبي الرئوي."},
+    {en: "Caller: He hasn't regained consciousness yet.", ar: "لم يستعد وعيه بعد."},
+    {en: "Operator: Do not hang up... the paramedics will take over the situation.", ar: "لا تغلق الخط... سيستلم المسعفون الموقف."}
+];
+
+// 9. Definitions (صورة 4 - أسفل)
+const definitionsData = [
+    {word: "administer", def: "to give medicine or treatment to someone"},
+    {word: "attention", def: "care or notice given to someone or something"},
+    {word: "buzz", def: "the sound of many people talking or machines working"},
+    {word: "chaos", def: "a state of complete confusion and disorder"},
+    {word: "chest", def: "the front part of the body between the neck and the stomach"},
+    {word: "collapse", def: "fall down suddenly, usually because of illness or weakness"},
+    {word: "consciousness", def: "the state of being awake and aware of what is happening around you"},
+    {word: "CPR", def: "an emergency procedure that uses chest compressions to help someone whose heart has stopped"},
+    {word: "grab", def: "to take or hold something quickly and strongly"},
+    {word: "heartbreaking", def: "very sad or upsetting"},
+    {word: "paramedics", def: "medical professionals who give emergency care and take people to the hospital by ambulance"},
+    {word: "pulse", def: "the regular beating of the heart that you can feel on your wrist or neck"},
+    {word: "rewarding", def: "giving a feeling of satisfaction or pleasure because you helped someone or achieved something good"},
+    {word: "rollercoaster", def: "a situation or experience with many ups and downs, often emotional"},
+    {word: "shift", def: "a set period of time that a person works (especially in hospitals, factories, etc.)"},
+    {word: "victim", def: "a person who has been hurt, killed, or affected by something bad like an accident or a crime"}
+];
+
+// ===================== بناء الواجهة (ترتيب واحد) =====================
+function buildAllSections() {
+    const container = document.getElementById('mainContainer');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                const wordHtml = makeWordSpans(enText);
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">${wordHtml}</div>`;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    let html = '';
+
+    // 1. Key Vocabulary
+    html += `<div class="section-block" id="secKeyVocab">
+        <div class="sec-title">💊 Key Vocabulary</div>
+        <div class="sec-body">
+            ${playBar('secKeyVocab')}
+            <div class="info-box"><div class="info-title">Key Vocabulary</div><div class="vocab">${makePills(keyVocab, 'secKeyVocab')}</div></div>
+        </div>
+    </div>`;
+
+    // 2. Vocabulary on Reading & Listening
+    html += `<div class="section-block" id="secFullVocab">
+        <div class="sec-title">📚 Vocabulary on Reading & Listening</div>
+        <div class="sec-body">
+            ${playBar('secFullVocab')}
+            <div class="info-box"><div class="info-title">Vocabulary on Reading & Listening Texts</div><div class="vocab">${makePills(l1l2Vocab, 'secFullVocab')}</div></div>
+        </div>
+    </div>`;
+
+    // 3. Phrases, Expressions & Idioms
+    html += `<div class="section-block" id="secPhrases">
+        <div class="sec-title">💬 Phrases, Expressions & Idioms</div>
+        <div class="sec-body">
+            ${playBar('secPhrases')}
+            <div class="rules-grid">${phrasesData.map((e,i) => makeRuleItem('💡', 'secPhrases', i, e[0], e[1], e[0])).join('')}</div>
+        </div>
+    </div>`;
+
+    // 4. Prepositions
+    html += `<div class="section-block" id="secPrepositions">
+        <div class="sec-title">🔗 Prepositions</div>
+        <div class="sec-body">
+            ${playBar('secPrepositions')}
+            <div class="rules-grid">${prepositionsData.map((p,i) => makeRuleItem('🔗', 'secPrepositions', i, p[0], p[1], p[0])).join('')}</div>
+        </div>
+    </div>`;
+
+    // 5. Derivatives
+    html += `<div class="section-block" id="secDerivatives">
+        <div class="sec-title">🔨 Derivatives</div>
+        <div class="sec-body">
+            ${playBar('secDerivatives')}
+            <div class="rules-grid">${derivativesData.map((d,i) => {
+                const formsStr = d.forms.join(" | ");
+                const speakText = `${d.word} | ${formsStr}`;
+                const displayText = `${d.word} → ${formsStr}`;
+                return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+            }).join('')}</div>
+        </div>
+    </div>`;
+
+    // 6. Synonyms & Antonyms
+    html += `<div class="section-block" id="secSynonyms">
+        <div class="sec-title">⚖️ Synonyms & Antonyms</div>
+        <div class="sec-body">
+            ${playBar('secSynonyms')}
+            <div class="rules-grid">${synAntData.map((s,i) => {
+                const speakText = cleanForSpeech(s.word) + " | " + s.syn + " | " + s.ant;
+                return makeRuleItem('⚖️', 'secSynonyms', i, speakText, `${s.syn} | ${s.ant}`, s.word + " | " + s.syn + " | " + s.ant);
+            }).join('')}</div>
+        </div>
+    </div>`;
+
+    // 7. Reading Text
+    html += `<div class="section-block" id="secRead">
+        <div class="sec-title">📖 Reading Text</div>
+        <div class="sec-body">
+            ${playBar('secRead')}
+            ${makeStorySection('A Day in the Life of a Hospital Nurse', readingText)}
+        </div>
+    </div>`;
+
+    // 8. Listening Text
+    html += `<div class="section-block" id="secListen">
+        <div class="sec-title">🎧 Listening Text</div>
+        <div class="sec-body">
+            ${playBar('secListen')}
+            ${makeStorySection('Emergency Call', listeningText)}
+        </div>
+    </div>`;
+
+    // 9. Definitions
+    html += `<div class="section-block" id="secDefs">
+        <div class="sec-title">📝 Definitions</div>
+        <div class="sec-body">
+            ${playBar('secDefs')}
+            <div class="rules-grid">${definitionsData.map((d,i) => {
+                const speakText = cleanForSpeech(d.word) + " | " + d.def;
+                return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+            }).join('')}</div>
+        </div>
+    </div>`;
+
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    if(!sec) return;
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

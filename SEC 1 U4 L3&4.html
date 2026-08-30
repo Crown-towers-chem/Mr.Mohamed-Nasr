@@ -1,0 +1,591 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Mohamed Abd El-Hakim Nasr</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201063383676" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01063383676
+    </a>
+    <a href="https://wa.me/+201063383676" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 1 - Unit 4: Small Actions Can Make a Difference (Lessons 3 & 4)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">💧</span><h1>Unit 4: Small Actions Can Make a Difference</h1><p class="sub">Sec 1 - Lessons 3 & 4</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+// ===================== بيانات المحتوى (Sec 1 - Unit 4 - Lessons 3 & 4) =====================
+
+// 1. Key Vocabulary
+const keyVocab = [
+    ["assembly (n)", "مؤتمر / اجتماع"],
+    ["drip (n) (v) (ped)", "قطرة (مياه) / يقطر"],
+    ["impact (n) (v) (ed)", "تأثير / يؤثر على"],
+    ["leak (n) (v) (ed)", "تسرب / يتسرب"],
+    ["mission (n)", "مهمة / مأمورية / بعثة"],
+    ["observations (n)", "ملاحظات"],
+    ["record (v) (ed)", "يسجل"],
+    ["survey (n) (v) (ed)", "يستطلع رأي / يستطلع"]
+];
+
+// 2. Vocabulary on Reading & Listening
+const l3l4Vocab = [
+    ["active (adj)", "نشيط"],
+    ["avoid (v) (ed)", "يتجنب"],
+    ["bright (adj)", "مشرق / مضيء"],
+    ["chart (n)", "رسم بياني / خريطة"],
+    ["check (v) (ed)", "يفحص / يتأكد"],
+    ["cleaner (n)", "المنظف / عامل نظافة"],
+    ["collect (v) (ed)", "يجمع"],
+    ["competition (n)", "مسابقة / منافسة"],
+    ["completely (adv)", "بشكل كامل / بالكامل"],
+    ["create (v) (d)", "يخلق / يبتكر"],
+    ["cycle (v) (d)", "يركب دراجة"],
+    ["Eiffel Tower (n)", "برج إيفل"],
+    ["finding (n)", "نتيجة / اكتشاف"],
+    ["fountain (n)", "نافورة"],
+    ["ignore (v) (d)", "يتجاهل"],
+    ["include (v) (d)", "يتضمن"],
+    ["inspire (v) (d)", "يلهم"],
+    ["junk food (n)", "طعام جاهز / سريع"],
+    ["notebook (n)", "مفكرة / مذكرة"],
+    ["notice (v) (d) (n)", "يلاحظ / ملاحظة"],
+    ["observation (n)", "ملاحظة / متابعة"],
+    ["observe (v) (d)", "يلاحظ / يراقب"],
+    ["planet (n)", "كوكب"],
+    ["playground (n)", "ملعب"],
+    ["present (v) (ed)", "يقدم"],
+    ["prove (v) (d)", "يثبت"],
+    ["public spaces (n)", "الأماكن العامة"],
+    ["rainwater (n)", "مياه الأمطار"],
+    ["research (n)", "بحث (علمي)"],
+    ["rest (n)", "بقية / استراحة"],
+    ["result (n)", "نتيجة"],
+    ["reuse (v) (d)", "يعيد الاستخدام"],
+    ["science lab (n)", "معمل العلوم"],
+    ["sink (n)", "حوض"],
+    ["sources (n)", "مصادر"],
+    ["special (adj)", "خاص / مميز"],
+    ["suggest (v) (ed)", "يقترح"],
+    ["tap (n)", "حنفية / صنبور"],
+    ["tiny (adj)", "ضئيل (صغير جداً)"],
+    ["unique (adj)", "فريد من نوعه / متفر"],
+    ["unplug (v) (ged)", "يسحب / يفصل القابس (الفيشة)"]
+];
+
+// 3. Phrases, Expressions & Idioms
+const phrasesData = [
+    ["a greener future", "مستقبل أكثر خضرة / مستقبل أكثر استدامة"],
+    ["do/conduct a survey", "يجري استطلاعاً"],
+    ["do research", "يجري بحثاً"],
+    ["for the first time", "لأول مرة"],
+    ["free time", "وقت الفراغ"],
+    ["help save water", "يساعد في توفير / الحفاظ على المياه"],
+    ["instead of", "بدلاً من"],
+    ["make a difference", "يحدث تغيير"],
+    ["play a part in", "يساهم في / يلعب دوراً في"],
+    ["taps were left running", "تُركت الحنفيات مفتوحة"]
+];
+
+// 4. Prepositions
+const prepositionsData = [
+    ["turn off", "يُطفئ / يفصل"],
+    ["turn on", "يُشعل / يُضيّع"],
+    ["harm to", "ضرر لـ"],
+    ["in use", "قيد الاستخدام"],
+    ["responsibility for", "مسؤولية لـ"]
+];
+
+// 5. Derivatives
+const derivativesData = [
+    {word: "activate", forms: ["activate (v) → activity/activation (n)", "active (adj)"], ex: "The team activated the alarm. / Physical activity is healthy. / The cat is very active."},
+    {word: "brighten", forms: ["brighten (v) → brightness (n)", "bright (adj)"], ex: "The sun brightened the room. / The brightness of the screen was too high. / The light is bright."},
+    {word: "collect", forms: ["collect (v) → collection (n)", "collective (adj)"], ex: "We collect rainwater. / The collection of stamps is his hobby. / It was a collective decision."},
+    {word: "compete", forms: ["compete (v) → competition/competitor (n)", "competitive (adj)"], ex: "They compete in the race. / The competition was tough. / He is a very competitive person."},
+    {word: "create", forms: ["create (v) → creation/creator/creature (n)", "creative (adj)"], ex: "The factory created some jobs. / The creation of the statue took years. / My daughter is very creative."},
+    {word: "include", forms: ["include (v) → inclusion (n)", "inclusive (adj)"], ex: "The price includes tax. / The inclusion of everyone is important. / The event was inclusive."},
+    {word: "inspire", forms: ["inspire (v) → inspiration/inspirer (n)", "inspired/inspiring (adj)"], ex: "She inspires everyone to work hard. / I drew inspiration from the story. / The speech was truly inspiring."},
+    {word: "observe", forms: ["observe (v) → observation/observer (n)", "observant (adj)"], ex: "Students observe the experiment. / His observation was helpful. / An observant person notices small details."},
+    {word: "survey", forms: ["survey (v) → survey/surveyor (n)", "surveyable (adj)"], ex: "They survey the area. / They conducted a survey. / The land is surveyable."}
+];
+
+// 6. Synonyms & Antonyms
+const synAntData = [
+    {word: "active", syn: "energetic/lively", ant: "lazy/inactive"},
+    {word: "avoid", syn: "evade/escape", ant: "face/confront"},
+    {word: "bright", syn: "shiny/glowing", ant: "dull/dark"},
+    {word: "collect", syn: "gather/assemble", ant: "scatter/lose"},
+    {word: "impact", syn: "effect/influence", ant: "cause/origin/source"},
+    {word: "inspire", syn: "motivate/encourage", ant: "discourage/demotivate"},
+    {word: "leak", syn: "crack/flow/leakage", ant: "seal/block"},
+    {word: "observation", syn: "monitoring/examination", ant: "neglect/ignorance"}
+];
+
+// 7. Reading Text
+const readingText = [
+    {en: "In a bright and busy classroom, the students were discussing ways to help their community and protect the environment. Their teacher suggested forming special teams, each with a unique mission. One of the most active groups was called 'The Water Team'.", ar: "في فصل دراسي مشرق ومزدحم، كان الطلاب يناقشون طرقاً لمساعدة مجتمعهم وحماية البيئة. اقترح معلمهم تشكيل فرق خاصة، لكل منها مهمة فريدة. كانت إحدى أكثر المجموعات نشاطاً تسمى 'فريق المياه'."},
+    {en: "The Water Team's mission was simple but important: to survey the school's water sources. This included taps in the bathrooms, sinks in the science lab, and the water fountains in the playground.", ar: "كانت مهمة فريق المياه بسيطة لكنها مهمة: مسح مصادر المياه في المدرسة. شمل ذلك الحنفيات في الحمامات، والأحواض في معمل العلوم، ونوافير المياه في الملعب."},
+    {en: "Their first task was to check for any drips or leaks. Even a small leak can waste many liters of water each day, so finding and fixing them would make a big difference.", ar: "كانت مهمتهم الأولى هي التحقق من أي قطرات أو تسربات. حتى التسرب الصغير يمكن أن يهدر العديد من لترات الماء كل يوم، لذا فإن العثور عليها وإصلاحها سيحدث فرقاً كبيراً."},
+    {en: "The students also observed how water was used during the day. They noticed that some taps were left running while students washed their hands or filled bottles. They recorded these observations carefully in a notebook.", ar: "لاحظ الطلاب أيضاً كيف يتم استخدام الماء خلال اليوم. لاحظوا أن بعض الحنفيات تُركت مفتوحة بينما كان الطلاب يغسلون أيديهم أو يملؤون الزجاجات. سجلوا هذه الملاحظات بعناية في دفتر ملاحظات."},
+    {en: "After two weeks of research, the Water Team presented their findings at the school assembly. They shared photos, charts, and ideas for saving water, such as turning off taps completely and using water bottles instead of paper cups.", ar: "بعد أسبوعين من البحث، قدم فريق المياه نتائجهم في اجتماع المدرسة. شاركوا الصور والرسوم البيانية والأفكار لتوفير المياه، مثل إغلاق الحنفيات تماماً واستخدام زجاجات المياه بدلاً من الأكياس الورقية."},
+    {en: "Their work inspired other classes to start saving water, too. It proved that even small changes, when done by many people, can have a big impact on the community and the planet.", ar: "ألهم عملهم الفصول الأخرى لبدء توفير المياه أيضاً. لقد أثبت أنه حتى التغييرات الصغيرة، عندما يقوم بها الكثير من الناس، يمكن أن يكون لها تأثير كبير على المجتمع والكوكب."}
+];
+
+// 8. Listening Text
+const listeningText = [
+    {en: "Keeping our environment clean is one of the most important responsibilities for people today.", ar: "الحفاظ على بيئتنا نظيفة هو أحد أهم المسؤوليات للناس اليوم."},
+    {en: "Protecting nature means learning how to live without causing serious harm to the world around us.", ar: "حماية الطبيعة تعني تعلم كيفية العيش دون التسبب في ضرر جسيم للعالم من حولنا."},
+    {en: "By practicing recycling, reducing waste, and reusing products, we can all play a part in building a healthier planet.", ar: "من خلال ممارسة إعادة التدوير وتقليل النفايات وإعادة استخدام المنتجات، يمكننا جميعاً المساهمة في بناء كوكب أكثر صحة."},
+    {en: "One of the best ways to help is to stop using much plastic. Carrying a reusable bag and bringing your own water bottle are simple actions that make a big difference.", ar: "من أفضل طرق المساعدة هو التوقف عن استخدام الكثير من البلاستيك. حمل حقيبة قابلة لإعادة الاستخدام وإحضار زجاجة الماء الخاصة بك هي إجراءات بسيطة تحدث فرقاً كبيراً."},
+    {en: "Another useful habit is turning off lights when leaving a room, and unplugging devices that are not in use.", ar: "عادة مفيدة أخرى هي إطفاء الأنوار عند مغادرة الغرفة، وفصل الأجهزة غير المستخدمة."},
+    {en: "Saving energy helps reduce pollution, and keeps resources from running out too quickly.", ar: "توفير الطاقة يساعد في تقليل التلوث، ويمنع الموارد من النفاد بسرعة كبيرة."},
+    {en: "In addition, we need to plant more trees, and to clean public spaces regularly. Planting trees gives us fresh air, and cleaning our streets and parks makes our communities safer and more beautiful.", ar: "بالإضافة إلى ذلك، نحتاج إلى زراعة المزيد من الأشجار، وتنظيف الأماكن العامة بانتظام. زراعة الأشجار تمنحنا هواءً نقياً، وتنظيف شوارعنا ومتنزهاتنا يجعل مجتمعاتنا أكثر أماناً وجمالاً."},
+    {en: "We should also encourage people to walk or cycle, and avoid driving everywhere.", ar: "يجب علينا أيضاً تشجيع الناس على المشي أو ركوب الدراجات، وتجنب القيادة في كل مكان."},
+    {en: "By working together, and choosing to take small actions every day, we can create a cleaner, greener, and more sustainable future.", ar: "من خلال العمل معاً، واختيار القيام بإجراءات صغيرة كل يوم، يمكننا خلق مستقبل أنظف وأكثر خضرة واستدامة."}
+];
+
+// 9. Definitions
+const definitionsData = [
+    {word: "survey", def: "a set of questions used to collect information about people's opinions or behavior"},
+    {word: "observation", def: "careful watching and noting of something in order to gain information"},
+    {word: "drip", def: "a small drop of liquid falling slowly"},
+    {word: "mission", def: "a special task or job that someone is sent to do"},
+    {word: "impact", def: "a strong effect or influence that something has"},
+    {word: "assembly", def: "a group of people gathered for a particular purpose, or the act of putting parts together"},
+    {word: "leak", def: "a hole or crack through which liquid or gas escapes"}
+];
+
+// ===================== دوال HTML المساعدة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+// ===================== بناء الواجهة =====================
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let speaker = '';
+                let dialogueText = enText;
+                const colonIndex = enText.indexOf(': ');
+                if (colonIndex > 0) {
+                    speaker = enText.substring(0, colonIndex);
+                    dialogueText = enText.substring(colonIndex + 2);
+                }
+                const emoji = speaker ? '💬' : '📖';
+                const wordHtml = makeWordSpans(dialogueText);
+                let speakerHtml = '';
+                if (speaker) {
+                    speakerHtml = `<span class="speaker-label">${emoji} ${speaker}</span> `;
+                }
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">
+                    ${speakerHtml} ${wordHtml}
+                </div> `;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    const sections = [];
+
+    // 1. Key Vocabulary
+    if (typeof keyVocab !== 'undefined' && keyVocab.length > 0) {
+        sections.push({ title:"💊 Key Vocabulary", id:"secKeyVocab", content: `<div class="info-box"><div class="info-title">Key Vocabulary</div><div class="vocab">${makePills(keyVocab, "secKeyVocab")}</div></div>` });
+    }
+
+    // 2. Vocabulary on Reading & Listening
+    if (typeof l3l4Vocab !== 'undefined' && l3l4Vocab.length > 0) {
+        sections.push({ title:"📚 Vocabulary on Reading & Listening", id:"secL3L4", content: `<div class="info-box"><div class="info-title">Vocabulary on Reading & Listening Texts</div><div class="vocab">${makePills(l3l4Vocab, "secL3L4")}</div></div>` });
+    }
+
+    // 3. Phrases, Expressions & Idioms
+    if (typeof phrasesData !== 'undefined' && phrasesData.length > 0) {
+        sections.push({ title:"💬 Phrases, Expressions & Idioms", id:"secPhrases", content: `<div class="rules-grid">${phrasesData.map((e,i) => makeRuleItem('💡', 'secPhrases', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 4. Prepositions
+    if (typeof prepositionsData !== 'undefined' && prepositionsData.length > 0) {
+        sections.push({ title:"🔗 Prepositions", id:"secPrepositions", content: `<div class="rules-grid">${prepositionsData.map((p,i) => makeRuleItem('🔗', 'secPrepositions', i, p[0], p[1], p[0])).join('')}</div>` });
+    }
+
+    // 5. Derivatives
+    if (typeof derivativesData !== 'undefined' && derivativesData.length > 0) {
+        sections.push({ title:"🔨 Derivatives (Word Families)", id:"secDerivatives", content: `<div class="rules-grid">${derivativesData.map((d,i) => {
+            const formsStr = d.forms.join(" | ");
+            const speakText = `${d.word} | ${formsStr}`;
+            const displayText = `${d.word} → ${formsStr}`;
+            return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 6. Synonyms & Antonyms
+    if (typeof synAntData !== 'undefined' && synAntData.length > 0) {
+        sections.push({ title:"⚖️ Synonyms & Antonyms", id:"secSynAnt", content: `<div class="rules-grid">${synAntData.map((s,i) => {
+            const speakText = cleanForSpeech(s.word) + " | " + s.syn + " | " + s.ant;
+            return makeRuleItem('⚖️', 'secSynAnt', i, speakText, `${s.syn} | ${s.ant}`, s.word + " | " + s.syn + " | " + s.ant);
+        }).join('')}</div>` });
+    }
+
+    // 7. Reading Text
+    if (typeof readingText !== 'undefined' && readingText.length > 0) {
+        sections.push({ title:"📖 Reading Text", id:"secRead", content: makeStorySection("The Water Team", readingText) });
+    }
+
+    // 8. Listening Text
+    if (typeof listeningText !== 'undefined' && listeningText.length > 0) {
+        sections.push({ title:"🎧 Listening Text", id:"secListen", content: makeStorySection("Protecting Our Environment", listeningText) });
+    }
+
+    // 9. Definitions
+    if (typeof definitionsData !== 'undefined' && definitionsData.length > 0) {
+        sections.push({ title:"📝 Definitions", id:"secDefs", content: `<div class="rules-grid">${definitionsData.map((d,i) => {
+            const speakText = cleanForSpeech(d.word) + " | " + d.def;
+            return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+        }).join('')}</div>` });
+    }
+
+    let html = '';
+    sections.forEach(sec => {
+        html += `<div class="section-block" id="${sec.id}">
+            <div class="sec-title">${sec.title}</div>
+            <div class="sec-body">
+                ${playBar(sec.id)}
+                ${sec.content}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

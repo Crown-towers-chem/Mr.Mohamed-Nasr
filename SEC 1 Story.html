@@ -1,0 +1,634 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Mohamed Abd El-Hakim Nasr</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201063383676" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01063383676
+    </a>
+    <a href="https://wa.me/+201063383676" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>The Old Man and the Sea - Chapters 1-6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+            --tab-bg: #e2e8f0; --tab-active: var(--A); --tab-text: #fff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        
+        /* Hero */
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        
+        /* Toolbar */
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        
+        /* Tabs */
+        .tabs-container{max-width:840px;margin:0 auto 10px;padding:0 16px;}
+        .tabs-nav{display:flex;flex-wrap:wrap;gap:4px;background:var(--card);padding:12px 16px;border-radius:12px 12px 0 0;border:1px solid var(--border);border-bottom:none;box-shadow:0 -2px 8px rgba(0,0,0,.04);}
+        .tab-btn{-webkit-appearance:none;appearance:none;border:none;padding:8px 16px;border-radius:6px;font-weight:800;font-size:14px;cursor:pointer;background:var(--tab-bg);color:var(--text);transition:all .2s;font-family:'Nunito',sans-serif;}
+        .tab-btn.active{background:var(--tab-active);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+        .tab-btn:active{transform:scale(.95);}
+        
+        .tab-content{display:none;animation:fadeIn .3s;}
+        .tab-content.active{display:block;}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">⛵</span><h1>The Old Man and the Sea</h1><p class="sub">Chapters 1 to 6 - Interactive Lessons</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<div class="tabs-container">
+    <div class="tabs-nav" id="tabsNav">
+        <button class="tab-btn active" data-tab="ch1">Chapter 1</button>
+        <button class="tab-btn" data-tab="ch2">Chapter 2</button>
+        <button class="tab-btn" data-tab="ch3">Chapter 3</button>
+        <button class="tab-btn" data-tab="ch4">Chapter 4</button>
+        <button class="tab-btn" data-tab="ch5">Chapter 5</button>
+        <button class="tab-btn" data-tab="ch6">Chapter 6</button>
+    </div>
+</div>
+
+<main class="container" id="mainContainer"></main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+// ===================== دوال مساعدة =====================
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+// ===================== محتوى الفصول الستة =====================
+
+function makeChapterData() {
+    // Chapter 1
+    const c1Vocab = [
+        ["admiration", "إعجاب"], ["breeze", "نسيم"], ["coil", "يلف/يلتف"],
+        ["companion", "صحبة"], ["composure", "رباطة جأش"], ["determination", "إصرار"],
+        ["dignity", "الكرامة"], ["grin", "يبتسم ابتسامة عريضة"], ["heel", "كعب القدم"],
+        ["hut", "كوخ"], ["leathery", "مدبوغ/مصبوغ"], ["loyal", "مخلص"],
+        ["luxuries", "كماليات/رفاهيات"], ["patched", "مليء بالرقَع"], ["scarred", "به أثر للجروح/يترك أثراً"],
+        ["spirit", "روح"]
+    ];
+    const c1Phrases = [
+        ["at his parents' order", "تنفيذاً لأوامر والديه"], ["empty-handed", "خالي اليدين"],
+        ["lean back", "يتكأ"], ["dare to", "يتجرأ على"], ["fishing gear", "معدات الصيد"],
+        ["luck will return", "سوف يأتي الحظ"], ["dream of", "يحلم بـ/يتمنى"],
+        ["laugh at", "يسخر من"], ["to be exact", "يكون حريصاً ودقيقاً"]
+    ];
+    const c1Text = [
+        {en: "Santiago was an old fisherman, and the sea was his companion. His skin had grown dark and leathery from years beneath the burning sun.", ar: "كان سانتياغو صياداً عجوزاً، وكان البحر رفيقه. أصبح جلده داكناً ومصبوغاً من سنوات تحت الشمس الحارقة."},
+        {en: "His hands were rough, cut, and scarred from pulling heavy fishing lines day after day. Yet, when people looked into his eyes, they did not see weakness. His eyes were as clear and bright as the sea itself.", ar: "كانت يداه خشنتين ومقطوعتين ومليئتين بالندوب من سحب خيوط الصيد الثقيلة يوماً بعد يوم. ومع ذلك، عندما نظر الناس في عينيه، لم يروا ضعفاً. كانت عيناه صافيتين ومشرقتين مثل البحر نفسه."},
+        {en: "For eighty-four long days, Santiago had gone out into the Gulf Stream and returned empty-handed. Not a single fish had been caught.", ar: "لمدة أربعة وثمانين يوماً طويلة، كان سانتياغو يخرج إلى تيار الخليج ويعود خالي اليدين. لم يتم صيد سمكة واحدة."},
+        {en: "In his small Cuban village, whispers began to spread. The younger fishermen, who still had luck, laughed at him quietly. They called him salao—the worst kind of unlucky. Yet Santiago carried himself with dignity.", ar: "في قريته الكوبية الصغيرة، بدأت الهمسات تنتشر. كان الصيادون الأصغر سناً، الذين لا يزال لديهم الحظ، يضحكون عليه بهدوء. لقد أطلقوا عليه اسم سالاو - وهو أسوأ أنواع سوء الحظ. ومع ذلك، كان سانتياغو يحمل نفسه بكرامة."},
+        {en: "He walked proudly with his fishing gear over his shoulder, his back straight, as if luck were something that could never truly defeat a man.", ar: "كان يمشي بفخر ومعدات الصيد على كتفه، وظهره مستقيم، وكأن الحظ شيء لا يمكن أن يهزم رجلاً حقاً."},
+        {en: "Among all the people of the village, only one remained loyal to him: a boy named Manolin. The boy had fished with Santiago since he was just five years old. Now he was twelve, strong and full of admiration for the old man.", ar: "من بين جميع سكان القرية، بقي واحد فقط مخلصاً له: صبي يدعى مانولين. كان الصبي يصطاد مع سانتياغو منذ أن كان عمره خمس سنوات فقط. الآن كان في الثانية عشرة من عمره، قوياً ومليئاً بالإعجاب بالرجل العجوز."},
+        {en: "He loved Santiago like a grandfather. For forty days, Manolin had fished with him, even when there was no catch. But finally, at his parents' order, he had joined another boat—a luckier boat that brought back fish.", ar: "لقد أحب سانتياغو مثل الجد. لمدة أربعين يوماً، كان مانولين يصطاد معه، حتى عندما لم يكن هناك صيد. لكن أخيراً، وبناءً على أوامر والديه، انضم إلى قارب آخر - قارب أكثر حظاً يعيد السمك."},
+        {en: "Still, every evening, when the other fishermen returned with their catch, Manolin would go to Santiago's small skiff. He would help the old man carry his nets, his gaff, and his harpoon. He would fold the patched sail. He would carry the old man's heavy lines, carefully coiled, and walk beside him.", ar: "ومع ذلك، كل مساء، عندما يعود الصيادون الآخرون بصيدهم، كان مانولين يذهب إلى قارب سانتياغو الصغير. كان يساعد الرجل العجوز في حمل شباكه، وخطافه، ورمحه. كان يطوي الشراع المليء بالرقع. وكان يحمل خيوط الرجل العجوز الثقيلة، الملفوفة بعناية، ويمشي بجانبه."}
+    ];
+
+    // Chapter 2
+    const c2Vocab = [
+        ["bait", "الطعم/يطعِم"], ["dock", "رصيف الميناء/حوض السفينة"], ["endurance", "قوة التحمل"],
+        ["gaff", "عصا بخطاف تستخدم في الصيد"], ["grateful", "شاكر/ممتن"], ["harbor", "مرفأ/ميناء"],
+        ["harpoon", "حربة لصيد الحيتان"], ["horizon", "الأفق"], ["pity", "شفقة"],
+        ["precision", "دقة/أحكام"], ["row", "يَجذف"], ["seaworthy", "صالح للإبحار"],
+        ["skiff", "قارب صغير للصيد"], ["slap", "صفعة/لطمة"], ["splash", "ترش/يتخبط في الماء"],
+        ["sweat", "العرق"], ["tar", "مادة القطران"], ["whisper", "همس/يهمِس"]
+    ];
+    const c2Phrases = [
+        ["believe in", "يؤمن بـ"], ["good luck", "حظ جيد"], ["push ... away", "يدفع ... بعيداً"],
+        ["eighty-five is my number", "رقم 85 هو رقم الحظ"], ["go too far", "يذهب بعيداً عن المعتاد"],
+        ["put on", "يرتدى"], ["exactness brought luck", "الدقة تجلب الحظ"],
+        ["keep his eyes on", "يضع نصب عينيه"], ["farther than the others dare", "أبعد مما يجرؤ عليه الآخرون (الشجاعة)"]
+    ];
+    const c2Text = [
+        {en: "In the early morning, before the sun rose, Santiago woke up. The sky was dark and full of stars. He loved this hour, when the village was quiet and the sea whispered in the distance.", ar: "في الصباح الباكر، قبل شروق الشمس، استيقظ سانتياغو. كانت السماء مظلمة ومليئة بالنجوم. كان يحب هذه الساعة، عندما تكون القرية هادئة والبحر يهمس في المسافة."},
+        {en: "He put on his old trousers, picked up his coil of lines, and stepped outside his small hut. The boy, Manolin, was already waiting for him. He carried food wrapped in paper—a gift for Santiago.", ar: "ارتدى بنطاله القديم، والتقط لفافة خيوطه، وخرج من كوخه الصغير. كان الصبي، مانولين، ينتظره بالفعل. كان يحمل طعاماً ملفوفاً في ورق - هدية لسانتياغو."},
+        {en: "'Here, old man. Some black beans, rice, and a little coffee,' he said proudly. Santiago accepted it gratefully. 'You are good to me, boy. I will need my strength today.'", ar: "'هنا يا رجل عجوز. بعض الفاصوليا السوداء والأرز والقليل من القهوة،' قال بفخر. قبلها سانتياغو بامتنان. 'أنت طيب معي يا فتى. سأحتاج قوتي اليوم.'"},
+        {en: "The boy helped him carry the lines, gaff, harpoon, and the sail, which was patched many times and looked like the flag of defeat. But Santiago carried it with pride, for he believed the sail would take him to his destiny.", ar: "ساعده الصبي في حمل الخيوط، والخطاف، والرمح، والشراع، الذي كان مرقعاً عدة مرات وبدا مثل علم الهزيمة. لكن سانتياغو حمله بفخر، لأنه آمن بأن الشراع سيأخذه إلى مصيره."},
+        {en: "As they walked toward the harbor, they passed other fishermen preparing their boats. Some greeted Santiago with respect, while others looked at him with pity. Santiago ignored both. He knew what he must do.", ar: "وبينما كانا يسيران نحو الميناء، مروا بصيادين آخرين يجهزون قواربهم. البعض حيّا سانتياغو باحترام، بينما نظر إليه آخرون بعطف. تجاهل سانتياغو الاثنين. كان يعرف ما يجب عليه فعله."},
+        {en: "They reached the small wooden skiff, Santiago's boat. It was old but seaworthy. The boy loaded the gear carefully, arranging the lines in neat coils so they would run freely when needed.", ar: "وصلا إلى القارب الخشبي الصغير، قارب سانتياغو. كان قديماً لكنه صالح للإبحار. حمل الصبي العدة بعناية، ورتب الخيوط في لفائف أنيقة حتى تعمل بحرية عند الحاجة."},
+        {en: "'Can I come with you?' Manolin asked. 'You are with a lucky boat now,' Santiago replied. 'Stay with them. I will manage alone. But when I catch the big one, you will help me carry it back.' The boy's eyes shone. 'I believe in you, old man.'", ar: "'هل يمكنني المجيء معك؟' سأل مانولين. 'أنت مع قارب محظوظ الآن،' أجاب سانتياغو. 'ابق معهم. سأتدبر أمري وحدي. لكن عندما أصطاد الكبيرة، ستساعدني في إعادتها.' برقت عينا الصبي. 'أنا أؤمن بك يا رجل عجوز.'"},
+        {en: "They sat together for a moment on the dock, sipping the warm coffee from tin cups. The air smelled of salt and tar, and the sea waited silently. Santiago looked at the horizon.", ar: "جلسا معاً للحظة على الرصيف، يحتسيان القهوة الدافئة من أكواب القصدير. كانت رائحة الهواء تفوح بالملح والقطران، وكان البحر ينتظر بصمت. نظر سانتياغو إلى الأفق."},
+        {en: "'Eighty-five is my number,' he said. 'Today, I will go far out. Farther than the others dare to go.' The boy nodded. 'You always go too far.' Santiago smiled. 'That is where the big fish live.'", ar: "'خمسة وثمانون هو رقمي،' قال. 'اليوم، سأذهب بعيداً. أبعد مما يجرؤ الآخرون على الذهاب.' أومأ الصبي. 'أنت دائماً تذهب بعيداً جداً.' ابتسم سانتياغو. 'هناك حيث تعيش الأسماك الكبيرة.'"}
+    ];
+
+    // Chapter 3
+    const c3Vocab = [
+        ["battle", "معركة"], ["brace", "يستجمع قواه"], ["eternal", "أبدي/خالد"],
+        ["forehead", "الجبهة (في الوجه)"], ["hook", "خطاف/يمسك بخطاف"], ["strain", "جهد/إجهاد"],
+        ["surrender", "يستسلم"], ["swallow", "يبتلع"], ["tighten", "يضيق/يشد"],
+        ["tow", "يسحب/يجر"], ["tremble", "يرتعش/يهتز"], ["unstoppable", "لا تتوقف"],
+        ["wipe", "يمسح"]
+    ];
+    const c3Phrases = [
+        ["cut into his hands", "يقطع يديه"], ["feel the power of", "يشعر بقوة ..."],
+        ["his heart beat faster", "قلبه يدق بسرعة"], ["except for", "ما عدا"],
+        ["go down", "تغرب"], ["may the best of us win", "الأفضل سيفوز"],
+        ["far from", "بعيداً عن"], ["held firm", "يمسك بإحكام"], ["wait for", "ينتظر"]
+    ];
+    const c3Text = [
+        {en: "The sun was high now, and the sea shone with a hard, bright light. Santiago wiped the sweat from his forehead and watched the bird circling. The old man knew that the bird was looking for fish near the surface.", ar: "كانت الشمس عالية الآن، والبحر يلمع بضوء قاسٍ وساطع. مسح سانتياغو العرق عن جبهته وراقب الطائر يحلق. كان الرجل العجوز يعلم أن الطائر كان يبحث عن سمك بالقرب من السطح."},
+        {en: "Suddenly, the bird dived straight down, and the water splashed. Small tuna jumped in the air, frightened by something larger below. Santiago's heart beat faster. He studied the lines with calm eyes, but inside he was excited.", ar: "فجأة، غطس الطائر مباشرة إلى الأسفل، وتناثر الماء. قفز التونة الصغير في الهواء، خائفاً من شيء أكبر بالأسفل. تسارعت ضربات قلب سانتياغو. درس الخيوط بعيون هادئة، لكنه كان متحمساً في الداخل."},
+        {en: "He had been waiting for this moment. His fingers felt the line tremble slightly. Then, without warning, the line began to move slowly, steadily. Something powerful was taking the bait. The old man held the line carefully. He did not pull.", ar: "كان ينتظر هذه اللحظة. شعرت أصابعه بارتعاش الخيط قليلاً. ثم، بدون سابق إنذار، بدأ الخيط يتحرك ببطء وثبات. كان هناك شيء قوي يأخذ الطعم. أمسك الرجل العجوز بالخيط بعناية. لم يسحب."},
+        {en: "He let the fish eat. He knew the ways of big fish. They circled, tested, and swallowed slowly. Santiago whispered, 'Take it, big one. Take it well.' Then the line tightened hard, cutting deep into his hand. The fish was hooked.", ar: "ترك السمكة تأكل. كان يعرف طرق الأسماك الكبيرة. كانت تدور، وتختبر، وتبتلع ببطء. همس سانتياغو، 'خذها، أيتها الكبيرة. خذيها جيداً.' ثم شد الخيط بقوة، قاطعاً يده بعمق. كانت السمكة قد اصطادت."},
+        {en: "Santiago braced his feet and leaned back. The line stretched out into the deep water with unstoppable force. The boat began to move slowly, pulled by the fish. 'He is strong,' Santiago said aloud. 'He will show me what strength is.'", ar: "ثبت سانتياغو قدميه واستند إلى الخلف. امتد الخيط إلى المياه العميقة بقوة لا تقاوم. بدأ القارب يتحرك ببطء، تجره السمكة. 'إنه قوي،' قال سانتياغو بصوت عالٍ. 'سيريني ما هي القوة.'"},
+        {en: "The fish did not jump. It swam steadily out into the open sea, far from all other boats. Santiago let it run, his hands steady though the line cut into his skin. He felt the power of the great creature below, pulling him farther and farther away from land.", ar: "لم تقفز السمكة. سبحت بثبات إلى البحر المفتوح، بعيداً عن جميع القوارب الأخرى. تركها سانتياغو تجري، ويداه ثابتتان رغم أن الخيط قطع جلده. شعر بقوة المخلوق العظيم بالأسفل، يسحبه أبعد وأبعد عن الأرض."},
+        {en: "For hours, the fish swam on, and the boat followed. Santiago drank a little water and ate a piece of tuna he had caught earlier for bait. He needed strength, for this battle would not end quickly.", ar: "لساعات، سبحت السمكة، وتبعها القارب. شرب سانتياغو القليل من الماء وأكل قطعة تونة كان قد اصطادها سابقاً للطعم. كان بحاجة إلى القوة، لأن هذه المعركة لن تنتهي بسرعة."},
+        {en: "As the sun went down, the line still pulled tight, and the fish still swam deep. The old man spoke to it softly: 'Fish, you are my brother. But I will not let you go. I will fight with all my heart to take you.'", ar: "مع غروب الشمس، كان الخيط لا يزال مشدوداً، والسمكة لا تزال تسبح في الأعماق. تحدث إليها الرجل العجوز بهدوء: 'أيتها السمكة، أنت أخي. لكنني لن أتركك تذهبين. سأقاتل بكل قلبي لآخذك.'"}
+    ];
+
+    // Chapter 4
+    const c4Vocab = [
+        ["ache", "يألم"], ["awe", "رهبة"], ["chew", "يمضغ"], ["clench", "يشد على (أسنانه)"],
+        ["companionship", "الصحبة"], ["cramp", "يتشنج/تنشج"], ["gulf", "خليج"],
+        ["hemp", "قنب (نبات يستخدم في صناعة الحبال والقماش الخشن)"], ["leap", "ينط/يقفز"],
+        ["marlin", "سمكة كبيرة لها منقار يشبه السيف"], ["palm", "كف اليد"],
+        ["shift", "يغير/يبدل"], ["sparingly", "دون إسراف"], ["spur", "مهماز (قطعة حادة من المعدن)"],
+        ["stiff", "متيبس"], ["surge", "يندفع بقوة هائلة"], ["will", "إرادة"]
+    ];
+    const c4Phrases = [
+        ["come up", "يظهر"], ["crash into", "يصطدم بـ"], ["feel fear", "يشعر بالخوف"],
+        ["feel pride", "يشعر بالفخر"], ["have the right", "لديه الحق"],
+        ["It is you or me.", "إما أنت أو أنا"], ["lean against", "يستند على"],
+        ["pain does not matter", "لا يهم الألم"], ["pour down", "يصب/يتصبب"],
+        ["show himself", "يظهر نفسه (يبين قوته الحقيقية)"]
+    ];
+    const c4Text = [
+        {en: "The morning sun rose golden over the sea, and the sky turned from black to pale blue. Santiago had not slept. His body was stiff, his hands were cut from the line, and his back ached from leaning against the pull of the great fish.", ar: "أشرقت شمس الصباح ذهبية فوق البحر، وتحولت السماء من الأسود إلى الأزرق الشاحب. لم ينام سانتياغو. كان جسده متيبساً، ويداه مقطوعتان من الخيط، وظهره يؤلمه من الاستناد على سحب السمكة الكبيرة."},
+        {en: "Yet his eyes were clear, and his spirit unbroken. The fish still swam powerfully, dragging the boat farther out into the gulf. Santiago knew they were alone now, far from other fishermen, far from the coast. But he did not feel fear.", ar: "ومع ذلك، كانت عيناه صافيتين، وروحه غير مكسورة. كانت السمكة لا تزال تسبح بقوة، تسحب القارب إلى أبعد من ذلك في الخليج. عرف سانتياغو أنهما وحيدان الآن، بعيداً عن الصيادين الآخرين، بعيداً عن الساحل. لكنه لم يشعر بالخوف."},
+        {en: "Instead, he felt pride. 'No one will see this fight,' he said aloud, 'but I will know it, and so will the fish.' He looked at the line, stretched tight into the water. 'You are my brother, fish,' he whispered, 'but I must kill you.'", ar: "بدلاً من ذلك، شعر بالفخر. 'لن يرى أحد هذه المعركة،' قال بصوت عالٍ، 'لكنني سأعرفها، وستعرفها السمكة أيضاً.' نظر إلى الخيط الممتد بإحكام في الماء. 'أنت أخي، أيتها السمكة،' همس، 'لكن يجب أن أقتلك.'"},
+        {en: "To rest his hands, Santiago shifted the line across his shoulders, letting the rough hemp bite into his back instead of his palms. He breathed deeply and ate another piece of tuna, chewing slowly.", ar: "لإراحة يديه، غير سانتياغو الخيط عبر كتفيه، تاركاً القنب الخشن يغرس في ظهره بدلاً من راحتيه. تنفس بعمق وأكل قطعة أخرى من التونة، ممضغاً ببطء."},
+        {en: "He knew he must save his strength. The battle was not about hours, but days. By noon, the fish suddenly pulled harder, and Santiago braced himself. The line cut deeper into his skin, but he did not let go.", ar: "كان يعلم أنه يجب أن يحافظ على قوته. لم تكن المعركة بضع ساعات، بل أياماً. بحلول الظهر، سحبت السمكة بقوة أكبر، وثبت سانتياغو نفسه. قطع الخيط أعمق في جلده، لكنه لم يتركه."},
+        {en: "His teeth clenched, sweat poured down his face. For a moment, he thought the fish might leap, but it did not. Instead, it dove deeper, dragging the skiff slowly along. The old man admired the creature's power. 'He has not shown himself yet,' he thought. 'He is too wise. But soon, he must come up.'", ar: "أحكم قبضته على أسنانه، وتصبب العرق على وجهه. للحظة، ظن أن السمكة قد تقفز، لكنها لم تفعل. بدلاً من ذلك، غاصت أعمق، وسحبت القارب ببطء. أعجب الرجل العجوز بقوة المخلوق. 'لم يُظهر نفسه بعد،' فكر. 'إنه حكيم جداً. لكن قريباً، يجب أن يظهر.'"},
+        {en: "The hours passed. The sun burned hot, and Santiago shaded his eyes. His muscles cramped, but he stretched them against the pain. He thought again of Joe DiMaggio, who played baseball with a bone spur in his heel.", ar: "مرت الساعات. كانت الشمس تحرق، وغطى سانتياغو عينيه. تشنجت عضلاته، لكنه مدها ضد الألم. فكر مرة أخرى في جو ديماجيو، الذي لعب البيسبول مع شوكة عظمية في كعبه."},
+        {en: "'If he could play with pain, I can fight with pain,' Santiago repeated. 'I am only an old man, but I can endure.' That night, the fish made a great move. It surged suddenly, pulling the boat faster than ever. Santiago almost fell, but he held on, his body trembling with the effort.", ar: "'إذا كان يستطيع اللعب مع الألم، يمكنني أنا القتال مع الألم،' كرر سانتياغو. 'أنا مجرد رجل عجوز، لكن يمكنني التحمل.' في تلك الليلة، قامت السمكة بحركة كبيرة. اندفعت فجأة، وسحبت القارب أسرع من أي وقت مضى. كاد سانتياغو أن يسقط، لكنه تمسك، وكان جسده يرتجف من الجهد."}
+    ];
+
+    // Chapter 5
+    const c5Vocab = [
+        ["fair", "عدل"], ["forgive", "يسامح"], ["gasp", "يشهق"],
+        ["glow", "يتلألأ"], ["gracefully", "برشاقة"], ["horizon", "الأفق"],
+        ["pain", "الألم"], ["pattern", "شكل"], ["sharks", "سمك القرش"],
+        ["sharp", "حاد"], ["surrender", "يستسلم"], ["swell", "يتورم"],
+        ["weaken", "يضعف"], ["weary", "متعب"]
+    ];
+    const c5Phrases = [
+        ["come into view", "تظهر للرؤية"], ["face what comes", "يواجه ما يأتي (يظهر)"],
+        ["feel at peace", "يشعر بالراحة والهدوء"], ["gasp at", "يشهق تعجباً على"],
+        ["prepare for", "يستعد لـ"], ["sail on", "يستمر في الإبحار"],
+        ["swell up", "يتورم"], ["victory carried danger", "النصر حمل في طياته الخطر"]
+    ];
+    const c5Text = [
+        {en: "The sun was rising again. Santiago had been fighting the fish for three long days and nights. His body was weary, his hands swollen and bleeding, but his spirit remained sharp.", ar: "كانت الشمس تشرق مرة أخرى. كان سانتياغو يقاتل السمكة لمدة ثلاثة أيام وليالٍ طويلة. كان جسده متعباً، ويداه منتفختين تنزفان، لكن روحه ظلت حادة."},
+        {en: "He knew the fish was weakening, though its strength was still greater than anything he had ever faced. The line pulled with less power now, and Santiago felt the fish circling slowly deep below the boat.", ar: "كان يعلم أن السمكة كانت تضعف، رغم أن قوتها كانت لا تزال أكبر من أي شيء واجهه على الإطلاق. كان الخيط يسحب بقوة أقل الآن، وشعر سانتياغو بالسمكة تدور ببطء في الأعماق تحت القارب."},
+        {en: "He recognized the pattern: the marlin was tired, but it would not surrender easily. It was preparing for its final struggle. 'Now it begins,' the old man whispered.", ar: "تعرف على النمط: كان المارلين متعباً، لكنه لن يستسلم بسهولة. كان يستعد لصراعه الأخير. 'الآن يبدأ،' همس الرجل العجوز."},
+        {en: "He braced his feet against the wooden boards of the skiff and leaned back with all the strength left in him. The fish circled wider and wider. Each turn brought it a little closer to the surface. Santiago worked carefully, pulling the line inch by inch.", ar: "ثبت قدميه على الألواح الخشبية للقارب واستند إلى الخلف بكل القوة المتبقية فيه. دارت السمكة على نطاق أوسع وأوسع. كل دورة جعلتها أقرب قليلاً إلى السطح. عمل سانتياغو بعناية، وسحب الخيط بوصة بوصة."},
+        {en: "His muscles burned, but he welcomed the pain. 'Pain is not an enemy,' he thought. 'It tells me I am alive.' At last, the marlin rose. The giant fish came into view, silver and purple in the water, glowing in the sunlight.", ar: "حرقت عضلاته، لكنه رحب بالألم. 'الألم ليس عدواً،' فكر. 'إنه يخبرني أنني على قيد الحياة.' أخيراً، صعد المارلين. ظهرت السمكة العملاقة للرؤية، فضية وأرجوانية في الماء، متلألئة في ضوء الشمس."},
+        {en: "Santiago gasped at its size. It was longer than the boat, with a great sword-like bill and a powerful body. The marlin swam gracefully, a king of the sea. 'Fish,' Santiago said aloud, his voice full of respect, 'you are my brother, but I must end this. Forgive me.'", ar: "شهق سانتياغو من حجمها. كانت أطول من القارب، بمنقار يشبه السيف العظيم وجسم قوي. سبح المارلين برشاقة، ملكاً للبحر. 'أيتها السمكة،' قال سانتياغو بصوت عالٍ، وصوته مليء بالاحترام، 'أنتِ أختي، لكن يجب أن أنهي هذا. سامحيني.'"},
+        {en: "The boat began its long journey home. Santiago's arms were weak, but the wind carried him gently toward the coast. He looked at the marlin's shining body in the water. 'We fought well, fish,' he said softly. 'You gave me everything you had. And I gave you everything I had. This was fair.'", ar: "بدأ القارب رحلته الطويلة إلى المنزل. كانت ذراعا سانتياغو ضعيفتين، لكن الرياح حملته بلطف نحو الساحل. نظر إلى جسم المارلين اللامع في الماء. 'لقد قاتلنا جيداً، أيتها السمكة،' قال بهدوء. 'لقد أعطيتني كل ما لديك. وأنا أعطيتك كل ما لدي. كان هذا عدلاً.'"}
+    ];
+
+    // Chapter 6
+    const c6Vocab = [
+        ["backbone", "العمود الفقري"], ["bitter", "مرير/مر"], ["flesh", "لحم"],
+        ["generous", "كريم"], ["glint", "يتلألأ"], ["insistent", "مُصر/مصمم"],
+        ["mako shark", "قرش الماكو (صغير الزعانف وسريع جداً)"], ["mast", "الصاري/سارية القارب"],
+        ["mutter", "يتمتم"], ["predator", "حيوان مفترس"], ["shadow", "ظل"],
+        ["slash", "يشق"], ["spear", "رمح"], ["splinter", "ينكسر"],
+        ["stab", "يطعن"], ["steadily", "بثبات"], ["strike", "يضرب/يصيب"],
+        ["swiftly", "بسرعة"], ["thrash", "يتلوى من الألم"], ["tiller", "ذراع دفة القارب"],
+        ["trail", "أثر"]
+    ];
+    const c6Phrases = [
+        ["a faint smile", "ابتسامة باهتة"], ["beyond words", "لا يمكن التعبير عنه بالكلمات"],
+        ["drive away", "يبعد شيئاً عنه"], ["in return", "بالمقابل"],
+        ["look at his catch", "ينظر إلى صيده"], ["shovel-nosed sharks", "أسماك قرش تشبه أنفها المجرفة"],
+        ["sink into the depths", "يغرق في الأعماق"], ["stripped of", "خالٍ من"],
+        ["take up", "يحمل/يمسك"], ["tear away", "ينتزع"],
+        ["vision blurring", "الرؤية غير واضحة"], ["with all the strength left in him", "بكل ما تبقى له من قوة"]
+    ];
+    const c6Text = [
+        {en: "The morning sun rose as Santiago's small skiff sailed steadily toward the shore. The giant marlin was tied beside the boat, its silver body shining in the light. Santiago, though proud, felt uneasy.", ar: "أشرقت شمس الصباح بينما أبحر قارب سانتياغو الصغير بثبات نحو الشاطئ. كان المارلين العملاق مربوطاً بجانب القارب، وجسمه الفضي يلمع في الضوء. سانتياغو، رغم فخره، شعر بعدم الارتياح."},
+        {en: "The sea was never generous without asking for something in return. He knew the scent of blood would call predators. And then he saw it: a dark shadow moving swiftly beneath the surface. A shark was tracking the marlin's trail of blood.", ar: "لم يكن البحر كريماً أبداً دون أن يطلب شيئاً في المقابل. كان يعلم أن رائحة الدم ستستدعي الحيوانات المفترسة. ثم رآه: ظل داكن يتحرك بسرعة تحت السطح. كان سمكة قرش تتعقب أثر دم المارلين."},
+        {en: "Santiago's heart tightened. 'So it begins,' he muttered. He took up his harpoon, though his hands were raw and shaking. The shark came closer, its sharp teeth glinting as it attacked the marlin's side.", ar: "انقبض قلب سانتياغو. 'إذن يبدأ الأمر،' تمتم. حمل رمحه، رغم أن يديه كانتا خامدتين ومرتعشتين. اقترب القرش، أسنانه الحادة تتلألأ وهو يهاجم جانب المارلين."},
+        {en: "With all the strength left in him, Santiago drove the harpoon down into the shark's head. The iron stuck deep, and the shark thrashed violently, turning the sea red. Finally, it sank, dead, into the depths.", ar: "بكل ما تبقى له من قوة، دفع سانتياغو الرمح في رأس القرش. اخترق الحديد بعمق، وتلوى القرش بعنف، محولاً البحر إلى اللون الأحمر. أخيراً، غرق ميتاً في الأعماق."},
+        {en: "But the victory was bitter. The marlin had lost a great piece of flesh, and blood flowed freely from its wound. Santiago looked at his catch with sorrow. 'They will come now, one after another,' he said.", ar: "لكن النصر كان مراً. فقد المارلين قطعة كبيرة من لحمه، وكان الدم يتدفق بحرية من جرحه. نظر سانتياغو إلى صيده بحزن. 'سيأتون الآن، واحداً تلو الآخر،' قال."},
+        {en: "He was right. Before long, more shadows appeared. A pair of galanos—shovel-nosed sharks—rose from the deep. They were slower but insistent. They bit at the marlin, tearing away its flesh. Santiago fought with his harpoon until it broke off in a shark's body.", ar: "كان محقاً. قبل وقت طويل، ظهرت المزيد من الظلال. ظهر زوج من غالانوس - أسماك قرش تشبه أنفها المجرفة - من الأعماق. كانت أبطأ لكنها مصممة. عضت المارلين، وانتزعت لحمه. قاتل سانتياغو برمحه حتى انكسر داخل جسم قرش."},
+        {en: "Now, he tied his knife to an oar and used it as a spear. He stabbed and slashed, killing one shark and driving the other away. But each battle cost him strength, and the marlin's body grew smaller, its beauty ruined.", ar: "الآن، ربط سكينه بمجذاف واستخدمه كرمح. طعن وشق، قاتلاً سمكة قرش وطارداً الأخرى بعيداً. لكن كل معركة كلفته قوة، وجسم المارلين أصبح أصغر، وأفسد جماله."},
+        {en: "As the hours passed, more sharks came. The smell of blood had spread far through the sea. Santiago fought them all, his arms burning, his vision blurring. He killed several but knew he could not stop them forever.", ar: "مع مرور الساعات، جاءت المزيد من أسماك القرش. انتشرت رائحة الدم في البحر. حاربهم سانتياغو جميعاً، وذراعاه تحترقان، ورؤيته غير واضحة. قتل العديد منهم لكنه علم أنه لا يستطيع إيقافهم للأبد."},
+        {en: "By afternoon, the marlin was only half a fish. Its head and backbone remained, but much of its flesh was gone. Santiago leaned against the mast, breathing heavily. 'I was beaten,' he whispered, 'but only by sharks, not by the fish.'", ar: "بحلول فترة ما بعد الظهر، كان المارلين نصف سمكة فقط. بقي رأسه وعموده الفقري، لكن الكثير من لحمه اختفى. استند سانتياغو إلى الصاري، يتنفس بصعوبة. 'لقد هُزمت،' همس، 'لكن فقط بواسطة أسماك القرش، وليس بواسطة السمكة.'"}
+    ];
+
+    return [
+        { id: 'ch1', name: 'Chapter 1', vocab: c1Vocab, phrases: c1Phrases, text: c1Text },
+        { id: 'ch2', name: 'Chapter 2', vocab: c2Vocab, phrases: c2Phrases, text: c2Text },
+        { id: 'ch3', name: 'Chapter 3', vocab: c3Vocab, phrases: c3Phrases, text: c3Text },
+        { id: 'ch4', name: 'Chapter 4', vocab: c4Vocab, phrases: c4Phrases, text: c4Text },
+        { id: 'ch5', name: 'Chapter 5', vocab: c5Vocab, phrases: c5Phrases, text: c5Text },
+        { id: 'ch6', name: 'Chapter 6', vocab: c6Vocab, phrases: c6Phrases, text: c6Text }
+    ];
+}
+
+// ===================== بناء الواجهة (Tabs Generator) =====================
+function buildAllSections() {
+    const container = document.getElementById('mainContainer');
+    const chapters = makeChapterData();
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                const wordHtml = makeWordSpans(s.en);
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">${wordHtml}</div>`;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    let allTabsHTML = '';
+    chapters.forEach((ch, idx) => {
+        const activeClass = idx === 0 ? 'active' : '';
+        const secId = ch.id;
+
+        let contentHTML = '';
+
+        // 1. Vocabulary
+        if (ch.vocab && ch.vocab.length > 0) {
+            contentHTML += `<div class="section-block" id="${secId}-vocab">
+                <div class="sec-title">📚 Chapter ${idx+1} Vocabulary</div>
+                <div class="sec-body">
+                    ${playBar(`${secId}-vocab`)}
+                    <div class="info-box"><div class="info-title">Vocabulary</div><div class="vocab">${makePills(ch.vocab, `${secId}-vocab`)}</div></div>
+                </div>
+            </div>`;
+        }
+
+        // 2. Phrases
+        if (ch.phrases && ch.phrases.length > 0) {
+            contentHTML += `<div class="section-block" id="${secId}-phrases">
+                <div class="sec-title">💬 Expressions & Phrases</div>
+                <div class="sec-body">
+                    ${playBar(`${secId}-phrases`)}
+                    <div class="rules-grid">${ch.phrases.map((e,i) => makeRuleItem('💡', `${secId}-phrases`, i, e[0], e[1], e[0])).join('')}</div>
+                </div>
+            </div>`;
+        }
+
+        // 3. Reading Text
+        if (ch.text && ch.text.length > 0) {
+            contentHTML += `<div class="section-block" id="${secId}-text">
+                <div class="sec-title">📖 Reading Text (Chapter ${idx+1})</div>
+                <div class="sec-body">
+                    ${playBar(`${secId}-text`)}
+                    ${makeStorySection(`Story - ${ch.name}`, ch.text)}
+                </div>
+            </div>`;
+        }
+
+        allTabsHTML += `<div class="tab-content ${activeClass}" id="${secId}">${contentHTML}</div>`;
+    });
+
+    container.innerHTML = allTabsHTML;
+}
+
+// ===================== نظام التاب =====================
+document.getElementById('tabsNav').addEventListener('click', function(e) {
+    if(e.target.classList.contains('tab-btn')) {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+
+        const tabId = e.target.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+
+        // Stop audio when switching tabs to prevent confusion
+        stopAll();
+    }
+});
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function getActiveContainer() {
+    return document.querySelector('.tab-content.active');
+}
+
+function playSection(secId) {
+    stopAll();
+    const activeTab = getActiveContainer();
+    if(!activeTab) return;
+    const sec = activeTab.querySelector(`#${secId}`);
+    if(!sec) return;
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const activeTab = getActiveContainer();
+    if(!activeTab) return;
+    const els = [...activeTab.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

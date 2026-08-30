@@ -1,0 +1,601 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Mohamed Abd El-Hakim Nasr</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201063383676" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01063383676
+    </a>
+    <a href="https://wa.me/+201063383676" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 1 - Unit 3: Fake Appearance & The Truth Trap (Lessons 3 & 4)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🛡️</span><h1>Unit 3: Fake Appearance & The Truth Trap</h1><p class="sub">Sec 1 - Lessons 3 & 4</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+// ===================== بيانات المحتوى (Sec 1 - Unit 3 - Lessons 3 & 4) =====================
+
+// 1. Key Vocabulary
+const keyVocab = [
+    ["awareness (n)", "وعي / معرفة"],
+    ["defense (n)", "دفاع / حماية"],
+    ["invisible (adj)", "خفي / غير مرئي"],
+    ["misinformation (n)", "معلومات مضللة"],
+    ["ruin (v) (ed) (n)", "يدمر / يخرب"],
+    ["rumors (n)", "شائعات"],
+    ["trust (n) (v) (ed)", "ثقة / يثق"]
+];
+
+// 2. Vocabulary on Reading & Listening
+const l3l4Vocab = [
+    ["advertisement (n)", "إعلان"],
+    ["affect (v) (ed)", "يؤثر على"],
+    ["appreciate (v) (d)", "يقدر"],
+    ["attack (n) (v) (ed)", "هجوم / يهاجم"],
+    ["authentic (adj)", "أصلي / حقيقي"],
+    ["authenticity (n)", "أصالة / مصداقية"],
+    ["avoid (v) (ed)", "يتجنب"],
+    ["battle (n)", "معركة"],
+    ["blog post (n)", "منشور / مدونة"],
+    ["bomb (n) (v) (ed)", "قنبلة / يقصف"],
+    ["bullet (n)", "طلقة / رصاصة"],
+    ["button (n)", "زر"],
+    ["combine (v) (d)", "يدمج"],
+    ["confidence (n)", "ثقة بالنفس"],
+    ["conflict (n)", "صراع"],
+    ["confused (adj)", "مرتبك"],
+    ["creativity (n)", "إبداع"],
+    ["critical (adj)", "حرج / انتقادي"],
+    ["cruel (adj)", "قاسي"],
+    ["curious (adj)", "فضولي"],
+    ["cyber bullying (n)", "التنمر الإلكتروني"],
+    ["destroy (v) (ed)", "يدمر"],
+    ["edited (adj)", "مُحرر"],
+    ["fight (v)", "يقاتل"],
+    ["followers (n)", "متابعون"],
+    ["genuine (adj)", "أصيل / حقيقي"],
+    ["half-truth (n)", "نصف الحقيقة"],
+    ["headline (n)", "عنوان رئيسي"],
+    ["icon (n)", "أيقونة / رمز"],
+    ["illusion (n)", "وهم"],
+    ["imitation (n)", "تقليد"],
+    ["impression (n)", "انطباع"],
+    ["individuals (n)", "أفراد"],
+    ["inspiring (adj)", "ملهم"],
+    ["luxury (n)", "رفاهية"],
+    ["misleading (adj)", "مضلل"],
+    ["motivate (v) (d)", "يحفز / يشجع"],
+    ["news story (n)", "خبر صحفي"],
+    ["openness (n)", "انفتاح"],
+    ["panic (v) (n) (ked)", "يفزع / يذعر"],
+    ["perfect (adj)", "مثالي / كامل"],
+    ["perfection (n)", "كمال"],
+    ["popular (adj)", "شائع / محبوب"],
+    ["pour (v) (ed)", "يسكب"],
+    ["press (v) (ed)", "يضغط"],
+    ["process (n)", "عملية"],
+    ["product (n)", "منتج"],
+    ["questioning mind (n)", "عقل ناقد"],
+    ["require (v) (d)", "يتطلب"],
+    ["resources (n)", "موارد"],
+    ["role model (n)", "قدوة حسنة"],
+    ["scientific (adj)", "علمي"],
+    ["sensational (adj)", "مثير"],
+    ["sincerity (n)", "إخلاص"],
+    ["staged lifestyles (n)", "أنماط حياة مرحلة"],
+    ["tank (n)", "دبابة"],
+    ["violence (n)", "عنف"],
+    ["weapons (n)", "أسلحة"]
+];
+
+// 3. Phrases, Expressions & Idioms
+const phrasesData = [
+    ["across the world", "عبر العالم"],
+    ["at least", "على الأقل"],
+    ["create lasting impressions", "يترك انطباعات دائمة"],
+    ["gain more followers", "يكسب المزيد من المتابعين"],
+    ["give us the chance", "يمنحنا الفرصة"],
+    ["make ... angry", "يجعل ... غاضباً"],
+    ["send a strong message", "يرسل رسالة قوية"],
+    ["take steps", "يتخذ خطوات"]
+];
+
+// 4. Prepositions
+const prepositionsData = [
+    ["benefit from", "يستفيد من"],
+    ["combine ... with", "يدمج ... مع"],
+    ["fight back", "يقاوم"],
+    ["fight over", "يتقاتل على"],
+    ["reflect on", "يفكر / يتأمل في"],
+    ["spread through/across", "ينتشر عبر / خلال"]
+];
+
+// 5. Derivatives
+const derivativesData = [
+    {word: "affect", forms: ["affect (v)", "effect (n)", "affected/effective (adj)"], ex: "Fast food can affect your health badly. / The new teacher had a positive effect on all students. / Exercise is an effective way to stay healthy."},
+    {word: "attack", forms: ["attack (v)", "attack/attacker (n)", "attacking (adj)"], ex: "The army attacked the enemy. / The attackers were arrested. / The attacking team scored a goal."},
+    {word: "combine", forms: ["combine (v)", "combination (n)", "combined (adj)"], ex: "We combined our efforts. / The combination of colors is beautiful. / We worked as a combined team."},
+    {word: "defend", forms: ["defend (v)", "defense/defender (n)", "defensive (adj)"], ex: "They defend their country. / The defense was strong. / He took a defensive stance."},
+    {word: "destroy", forms: ["destroy (v)", "destruction (n)", "destructive (adj)"], ex: "The storm destroyed the town. / The destruction was total. / Earthquakes are destructive."},
+    {word: "improve", forms: ["improve (v)", "improvement (n)", "improved (adj)"], ex: "He improved his grades. / There's room for improvement. / The improved design works better."},
+    {word: "ruin", forms: ["ruin (v)", "ruin/ruins (n)", "ruined (adj)"], ex: "The scandal ruined his career. / The building was a ruin. / The ruined castle was beautiful."},
+    {word: "trust", forms: ["trust (v)", "trust (n)", "trusted/trustful (adj)"], ex: "I trust you completely. / Trust is essential in friendship. / He is a trusted advisor."}
+];
+
+// 6. Synonyms & Antonyms
+const synAntData = [
+    {word: "awareness", syn: "consciousness/knowledge", ant: "ignorance/unawareness"},
+    {word: "destroy", syn: "ruin/smash/demolish", ant: "construct/repair"},
+    {word: "improve", syn: "develop/boost", ant: "worsen/decline"},
+    {word: "invisible", syn: "unseen/hidden", ant: "visible/obvious"},
+    {word: "luxury", syn: "comfort/wealth", ant: "poverty/deprivation"},
+    {word: "popular", syn: "famous/admired", ant: "unpopular/unknown"},
+    {word: "trust", syn: "faith/confidence", ant: "doubt/distrust"},
+    {word: "violence", syn: "cruelty/aggression", ant: "peace/gentleness"}
+];
+
+// 7. Reading Text
+const readingText = [
+    {en: "In the past, wars were fought with soldiers, tanks, and planes. Today, a new kind of war is spreading across the world. It does not use bullets or bombs. Instead, it uses words — lies, half-truths, and rumors. Experts call this 'the war of the new generation'.", ar: "في الماضي، كانت الحروب تُخاض بالجنود والدبابات والطائرات. اليوم، ينتشر نوع جديد من الحرب في جميع أنحاء العالم. لا يستخدم الرصاص أو القنابل. بدلاً من ذلك، يستخدم الكلمات - الأكاذيب وأنصاف الحقائق والشائعات. يطلق الخبراء على هذا اسم 'حرب الجيل الجديد'."},
+    {en: "In this kind of war, the goal is not to destroy buildings, but to damage trust. Lies can be used to make people angry, afraid, or confused. A rumor can spread quickly through social media, making millions believe something that is not true.", ar: "في هذا النوع من الحرب، الهدف ليس تدمير المباني، بل الإضرار بالثقة. يمكن استخدام الأكاذيب لجعل الناس غاضبين أو خائفين أو مرتبكين. يمكن للشائعة أن تنتشر بسرعة عبر وسائل التواصل الاجتماعي، مما يجعل الملايين يصدقون شيئاً غير صحيح."},
+    {en: "When people no longer know what to believe, it becomes easier to control them. The victims of these 'information attacks' can be individuals, companies, or even whole countries.", ar: "عندما لم يعد الناس يعرفون ما الذي يجب تصديقه، يصبح من الأسهل السيطرة عليهم. يمكن أن يكون ضحايا هذه 'الهجمات المعلوماتية' أفراداً أو شركات أو حتى دولاً بأكملها."},
+    {en: "A false story about a famous person can ruin their career. A rumor about a company can cause customers to stop buying its products. One dangerous thing about this invisible weapon is how hard it is to fight back. Once a lie is shared online, it can travel faster than the truth.", ar: "قصة كاذبة عن شخص مشهور يمكن أن تدمر مسيرته المهنية. يمكن للشائعة عن شركة أن تتسبب في توقف العملاء عن شراء منتجاتها. أحد الأشياء الخطيرة في هذا السلاح غير المرئي هو مدى صعوبة مقاومته. بمجرد مشاركة كذبة عبر الإنترنت، يمكنها السفر بشكل أسرع من الحقيقة."},
+    {en: "People may share it without checking if it is correct. Some do it because they are angry, others because they find it exciting.", ar: "قد يشاركها الناس دون التحقق مما إذا كانت صحيحة. يفعل البعض ذلك لأنهم غاضبون، والبعض الآخر لأنهم يجدونها مثيرة."},
+    {en: "Protecting ourselves from this new kind of war requires awareness. We must think before we believe or share a story. We should ask: 'Where did this information come from? Is it supported by facts? Who might benefit from me believing this?' In the war of the new generation, the most powerful defense is a careful and questioning mind.", ar: "حماية أنفسنا من هذا النوع الجديد من الحرب تتطلب الوعي. يجب أن نفكر قبل أن نصدق أو نشارك قصة. يجب أن نسأل: 'من أين أتت هذه المعلومات؟ هل هي مدعومة بالحقائق؟ من قد يستفيد من تصديقي لهذا؟' في حرب الجيل الجديد، أقوى دفاع هو عقل حذر وناقد."}
+];
+
+// 8. Listening Text
+const listeningText = [
+    {en: "In modern life, appearances can sometimes be misleading, but they also remind us of the importance of being genuine. Social media and advertisements may show perfect images, yet they give us the chance to reflect on what really matters.", ar: "في الحياة الحديثة، يمكن أن تكون المظاهر مضللة في بعض الأحيان، لكنها تذكرنا أيضاً بأهمية أن نكون حقيقيين. قد تظهر وسائل التواصل الاجتماعي والإعلانات صوراً مثالية، لكنها تمنحنا الفرصة للتفكير فيما يهم حقاً."},
+    {en: "Instead of comparing ourselves with edited pictures or staged lifestyles, we can use them as motivation to appreciate honesty and real achievements, which would be great if we did.", ar: "بدلاً من مقارنة أنفسنا بالصور المعدلة أو أنماط الحياة المرحلية، يمكننا استخدامها كحافز لتقدير الصدق والإنجازات الحقيقية، وهو أمر رائع إذا قمنا بذلك."},
+    {en: "Throughout history, people have enjoyed expressing themselves through clothes, makeup, and style. This creativity can be fun and inspiring as long as we remember that true worth does not depend on looks alone.", ar: "على مر التاريخ، استمتع الناس بالتعبير عن أنفسهم من خلال الملابس والمكياج والأناقة. يمكن أن يكون هذا الإبداع ممتعاً وملهماً طالما تذكرنا أن القيمة الحقيقية لا تعتمد على المظهر فقط."},
+    {en: "If we combine appearance with sincerity, we send a powerful message of confidence. Many influencers and role models today are turning towards authenticity—they share their daily struggles, simple routines, and true feelings.", ar: "إذا جمعنا المظهر مع الإخلاص، نرسل رسالة قوية من الثقة. يتجه العديد من المؤثرين وقدواتنا اليوم نحو الأصالة - يشاركون صراعاتهم اليومية وروتينهم البسيط ومشاعرهم الحقيقية."},
+    {en: "Their openness encourages others to value honesty more than perfection. If they do so, many will follow. The bright side is clear: genuine appearance builds trust, respect, and stronger connections.", ar: "انفتاحهم يشجع الآخرين على تقدير الصدق أكثر من الكمال. إذا فعلوا ذلك، سيتبعهم الكثيرون. الجانب المشرق واضح: المظهر الحقيقي يبني الثقة والاحترام والروابط الأقوى."},
+    {en: "Real smiles, acts of kindness, and sincere words create lasting impressions. Confidence grows when we celebrate who we truly are—not when we try to hide behind illusions. By choosing truth over imitation, we inspire both ourselves and others.", ar: "الابتسامات الحقيقية وأعمال اللطف والكلمات الصادقة تخلق انطباعات دائمة. تنمو الثقة عندما نحتفل بمن نحن حقاً - وليس عندما نحاول الاختباء خلف الأوهام. باختيار الحقيقة على التقليد، نلهم أنفسنا والآخرين."}
+];
+
+// 9. Definitions
+const definitionsData = [
+    {word: "awareness", def: "the state of knowing and understanding what is happening around you"},
+    {word: "defense", def: "the act of protecting someone or something from harm or danger"},
+    {word: "invisible", def: "something that cannot be seen"},
+    {word: "misinformation", def: "information meant to make people believe something false"},
+    {word: "rumor", def: "a story that may not be true, passed from person to person"},
+    {word: "trust", def: "a feeling of confidence in someone or something; believing that they are honest or reliable"}
+];
+
+// ===================== دوال HTML المساعدة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+// ===================== بناء الواجهة =====================
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let speaker = '';
+                let dialogueText = enText;
+                const colonIndex = enText.indexOf(': ');
+                if (colonIndex > 0) {
+                    speaker = enText.substring(0, colonIndex);
+                    dialogueText = enText.substring(colonIndex + 2);
+                }
+                const emoji = speaker ? '💬' : '📖';
+                const wordHtml = makeWordSpans(dialogueText);
+                let speakerHtml = '';
+                if (speaker) {
+                    speakerHtml = `<span class="speaker-label">${emoji} ${speaker}</span> `;
+                }
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">
+                    ${speakerHtml} ${wordHtml}
+                </div> `;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    const sections = [];
+
+    // 1. Key Vocabulary
+    if (typeof keyVocab !== 'undefined' && keyVocab.length > 0) {
+        sections.push({ title:"💊 Key Vocabulary", id:"secKeyVocab", content: `<div class="info-box"><div class="info-title">Key Vocabulary</div><div class="vocab">${makePills(keyVocab, "secKeyVocab")}</div></div>` });
+    }
+
+    // 2. Vocabulary on Reading & Listening
+    if (typeof l3l4Vocab !== 'undefined' && l3l4Vocab.length > 0) {
+        sections.push({ title:"📚 Vocabulary on Reading & Listening", id:"secL3L4", content: `<div class="info-box"><div class="info-title">Vocabulary on Reading & Listening Texts</div><div class="vocab">${makePills(l3l4Vocab, "secL3L4")}</div></div>` });
+    }
+
+    // 3. Phrases, Expressions & Idioms
+    if (typeof phrasesData !== 'undefined' && phrasesData.length > 0) {
+        sections.push({ title:"💬 Phrases, Expressions & Idioms", id:"secPhrases", content: `<div class="rules-grid">${phrasesData.map((e,i) => makeRuleItem('💡', 'secPhrases', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 4. Prepositions
+    if (typeof prepositionsData !== 'undefined' && prepositionsData.length > 0) {
+        sections.push({ title:"🔗 Prepositions", id:"secPrepositions", content: `<div class="rules-grid">${prepositionsData.map((p,i) => makeRuleItem('🔗', 'secPrepositions', i, p[0], p[1], p[0])).join('')}</div>` });
+    }
+
+    // 5. Derivatives
+    if (typeof derivativesData !== 'undefined' && derivativesData.length > 0) {
+        sections.push({ title:"🔨 Derivatives (Word Families)", id:"secDerivatives", content: `<div class="rules-grid">${derivativesData.map((d,i) => {
+            const formsStr = d.forms.join(" | ");
+            const speakText = `${d.word} | ${formsStr}`;
+            const displayText = `${d.word} → ${formsStr}`;
+            return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 6. Synonyms & Antonyms
+    if (typeof synAntData !== 'undefined' && synAntData.length > 0) {
+        sections.push({ title:"⚖️ Synonyms & Antonyms", id:"secSynAnt", content: `<div class="rules-grid">${synAntData.map((s,i) => {
+            const speakText = cleanForSpeech(s.word) + " | " + s.syn + " | " + s.ant;
+            return makeRuleItem('⚖️', 'secSynAnt', i, speakText, `${s.syn} | ${s.ant}`, s.word + " | " + s.syn + " | " + s.ant);
+        }).join('')}</div>` });
+    }
+
+    // 7. Reading Text
+    if (typeof readingText !== 'undefined' && readingText.length > 0) {
+        sections.push({ title:"📖 Reading Text", id:"secRead", content: makeStorySection("The War of the New Generation", readingText) });
+    }
+
+    // 8. Listening Text
+    if (typeof listeningText !== 'undefined' && listeningText.length > 0) {
+        sections.push({ title:"🎧 Listening Text", id:"secListen", content: makeStorySection("The Truth About Appearances", listeningText) });
+    }
+
+    // 9. Definitions
+    if (typeof definitionsData !== 'undefined' && definitionsData.length > 0) {
+        sections.push({ title:"📝 Definitions", id:"secDefs", content: `<div class="rules-grid">${definitionsData.map((d,i) => {
+            const speakText = cleanForSpeech(d.word) + " | " + d.def;
+            return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+        }).join('')}</div>` });
+    }
+
+    let html = '';
+    sections.forEach(sec => {
+        html += `<div class="section-block" id="${sec.id}">
+            <div class="sec-title">${sec.title}</div>
+            <div class="sec-body">
+                ${playBar(sec.id)}
+                ${sec.content}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

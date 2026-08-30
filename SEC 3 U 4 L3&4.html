@@ -1,0 +1,643 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Mohamed Abd El-Hakim Nasr</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201063383676" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01063383676
+    </a>
+    <a href="https://wa.me/+201063383676" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 3 - Unit 4: The Underwater World & Into the Depth of the Ocean (L3&4)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        
+        /* Hero */
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        
+        /* Toolbar */
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">🌊</span><h1>Unit 4: The Underwater World & Into the Depth of the Ocean</h1><p class="sub">Sec 3 - Part 2 (Lessons 3 & 4)</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container" id="mainContainer"></main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+// ===================== دوال مساعدة =====================
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+// ===================== محتوى الوحدة (Unit 4 - Lessons 3 & 4) =====================
+
+// 1. Key Vocabulary
+const keyVocab = [
+    ["awe-inspiring (adj)", "مثير للإعجاب"],
+    ["coordinated (adj)", "منسق / متناغم"],
+    ["detect (v) (ed)", "يكتشف / يستدل"],
+    ["endangered (adj)", "معرض للخطر"],
+    ["figuratively (adv)", "مجازياً"],
+    ["glow-producing (adj)", "منتج للضوء / التوهج"],
+    ["hatch (v) (ed)", "تفقس (البيض) / يخطط لشيء ما"],
+    ["literally (adv)", "حرفياً"],
+    ["mind-blowing (adj)", "مثير / مذهل"],
+    ["organized (adj)", "منظم"]
+];
+
+// 2. Vocabulary on Reading & Listening
+const l1l2Vocab = [
+    ["affecting (adj)", "مؤثر"],
+    ["attract (v) (ed)", "يجذب"],
+    ["beauty (n)", "جمال"],
+    ["blind (adj)", "أعمى"],
+    ["blood (n)", "دم"],
+    ["communicate (v) (d)", "يتواصل"],
+    ["coral polyps (n)", "بولبيات مرجانية (كائنات بحرية بسيطة)"],
+    ["darkness (n)", "ظلام"],
+    ["depth (n)", "عمق"],
+    ["drop (n) (v) (ped)", "قطرة / يلقي"],
+    ["emphasize (v) (d)", "يؤكد / يشدد"],
+    ["encounter (v) (ed)", "يواجه / يلاقي"],
+    ["fascinating (adj)", "ساحر / فاتن"],
+    ["fade (v) (d)", "يتلاشى"],
+    ["fast-changing (adj)", "سريع التغير"],
+    ["fast-rising (adj)", "سريع الارتفاع"],
+    ["figure (n)", "شخصية"],
+    ["fussy (adj)", "صعب الإرضاء / مدقق"],
+    ["glide (v) (d)", "ينزلق / ينساب"],
+    ["gracefully (adv)", "برشاقة / بأناقة"],
+    ["hidden (adj)", "مخفي"],
+    ["high-pitched (adj)", "حاد النغمة / رفيع الصوت"],
+    ["ice-cold (adj)", "مثلج / بارد كالثلج"],
+    ["legend (n)", "أسطورة"],
+    ["life-saving (adj)", "منقذ للحياة"],
+    ["little-known (adj)", "مجهول إلى حد كبير"],
+    ["long-distance (adj)", "بعيد المدى / لمسافات طويلة"],
+    ["migration (n)", "هجرة"],
+    ["miles (n)", "أميال"],
+    ["mysterious (adj)", "غامض"],
+    ["organ (n)", "عضو (في الجسم)"],
+    ["overfishing (n)", "الصيد الجائر"],
+    ["persuasive (adj)", "مقنع"],
+    ["plastic-filled (adj)", "مملوء بالبلاستيك"],
+    ["prey (n)", "فريسة"],
+    ["rainforests (n)", "غابات مطيرة"],
+    ["reassure (v) (d)", "يطمئن / يهدئ"],
+    ["refer (v) (ed)", "يشير"],
+    ["release (v) (d)", "يطلق / يفرج عنه"],
+    ["reputation (n)", "سمعة"],
+    ["resolution (n)", "حل (نهاية الصراع)"],
+    ["roaring (adj)", "صاخب / عادِر"],
+    ["silver (n)", "فضة"],
+    ["slow-moving (adj)", "بطيء الحركة"],
+    ["storytelling (n)", "سرد القصة"],
+    ["strange-looking (adj)", "غريب الشكل"],
+    ["sunlight (n)", "ضوء الشمس"],
+    ["temperature (n)", "درجة الحرارة"],
+    ["tension (n)", "توتر / توتر"],
+    ["tropical (adj)", "استوائي"],
+    ["unbelievable (adj)", "لا يصدق"],
+    ["voter (n)", "ناخب"],
+    ["wave (n)", "موجة"],
+    ["whisper (v) (ed)", "يهمِس"]
+];
+
+// 3. Phrases, Expressions & Idioms
+const phrasesData = [
+    ["(be) referred to as ...", "يشار إليه بـ ..."],
+    ["(be) in deep water", "في ورطة / مشكلة كبيرة"],
+    ["do not make it", "لا يفلح / لا ينجح في"],
+    ["face a hard-to-survive", "يواجه صعوبة في البقاء على قيد الحياة"],
+    ["from miles away", "من مسافة أميال بعيدة"],
+    ["have a sense of ...", "لديه إحساس ..."],
+    ["put ... at risk", "يعرض ... للخطر"],
+    ["turn a blind eye to", "يغض الطرف / يغفل عن"],
+    ["wide variety of", "تنوع كبير / مجموعة كبيرة من"]
+];
+
+// 4. Prepositions
+const prepositionsData = [
+    ["afford to", "يستطيع تحمل"],
+    ["connection to", "الاتصال بـ"],
+    ["crash against", "يرتطم بـ"],
+    ["dangerous to", "خطير على"],
+    ["dive through", "يغوص خلال"],
+    ["full of", "ممتلئ بـ"],
+    ["respectful of", "محترم لـ"],
+    ["speak of", "يتحدث عن"]
+];
+
+// 5. Derivatives (مع الأمثلة)
+const derivativesData = [
+    {word: "affect", forms: ["affect (v) → effect (n)", "affecting/affected (adj)"], ex: "The ocean affects the climate. / The effect of pollution is visible. / It's an affecting story."},
+    {word: "attract", forms: ["attract (v) → attraction (n)", "attractive (adj)"], ex: "Coral reefs attract many species. / The attraction of the sea is strong. / It's an attractive place."},
+    {word: "coordinate", forms: ["coordinate (v) → coordination (n)", "coordinated (adj)"], ex: "The teacher will coordinate groups to ensure everyone finishes their part. (v) / Good coordination between the players helped the team win the difficult match. (n) / The students presented a coordinated effort, which showed great teamwork. (adj)"},
+    {word: "detect", forms: ["detect (v) → detection/detector (n)", "detectable (adj)"], ex: "Sharks can detect blood from miles away. / Early detection is vital. / The changes are barely detectable."},
+    {word: "endanger", forms: ["endanger (v) → danger (n)", "endangered (adj)"], ex: "Pollution endangers sea life. / The danger is real. / They are endangered species."},
+    {word: "migrate", forms: ["migrate (v) → migration (n)", "migratory (adj)"], ex: "Whales migrate long distances. / Migration patterns are studied. / They are migratory animals."},
+    {word: "persuade", forms: ["persuade (v) → persuasion (n)", "persuasive (adj)"], ex: "We must persuade people to recycle. / Persuasion is key. / He made a persuasive argument."},
+    {word: "release", forms: ["release (v) → release (n)", "released (adj)"], ex: "They release the animals back into the wild. / The release was successful. / The newly released film is about the ocean."}
+];
+
+// 6. Synonyms & Antonyms
+const synAntData = [
+    {word: "affecting", syn: "moving", ant: "unemotional"},
+    {word: "attract", syn: "draw/fascinate/captivate", ant: "repel/bore/disinterest"},
+    {word: "detect", syn: "discover/identify/spot/notice", ant: "overlook/ignore/conceal"},
+    {word: "endangered", syn: "threatened/imperiled", ant: "safe/protected"},
+    {word: "figuratively", syn: "metaphorically", ant: "literally"},
+    {word: "glow-producing", syn: "light-emitting", ant: "dark"},
+    {word: "persuasive", syn: "convincing/logical/valid", ant: "unconvincing/unreasonable"},
+    {word: "silly", syn: "foolish/childish/ridiculous", ant: "wise/sensible/reasonable"},
+    {word: "variety", syn: "diversity/collection/variation", ant: "uniformity/similarity"}
+];
+
+// 7. Reading Text
+const readingText = [
+    {en: "The ocean is home to a wide variety of amazing creatures.", ar: "المحيط هو موطن لمجموعة واسعة ومتنوعة من المخلوقات المذهلة."},
+    {en: "Some are deep-sea animals that live in complete darkness, using glow-producing organs to attract prey.", ar: "بعضها حيوانات أعماق البحار تعيش في ظلام دامس، تستخدم أعضاء منتجة للضوء لجذب الفرائس."},
+    {en: "Others, like dolphins, are intelligent and social, often seen diving through the waves in coordinated groups.", ar: "أخرى، مثل الدلافين، ذكية واجتماعية، وغالباً ما تُرى وهي تغوص عبر الأمواج في مجموعات منسقة."},
+    {en: "Sharks have an unbelievable sense of smell and can detect a single drop of blood from miles away.", ar: "تمتلك أسماك القرش حاسة شم لا تصدق ويمكنها اكتشاف قطرة دم واحدة من مسافة أميال بعيدة."},
+    {en: "Despite their reputation, most sharks are not dangerous to humans.", ar: "على الرغم من سمعتها، فإن معظم أسماك القرش ليست خطيرة على البشر."},
+    {en: "In fact, many species are endangered because of overfishing and pollution.", ar: "في الواقع، العديد من الأنواع مهددة بالانقراض بسبب الصيد الجائر والتلوث."},
+    {en: "Coral reefs are another awe-inspiring part of marine life.", ar: "الشعاب المرجانية هي جزء آخر مثير للإعجاب من الحياة البحرية."},
+    {en: "These colorful underwater ecosystems are built by tiny animals called coral polyps.", ar: "تُبنى هذه النظم البيئية الملونة تحت الماء بواسطة حيوانات صغيرة تسمى البولبيات المرجانية."},
+    {en: "They support thousands of marine species and are often referred to as the 'rainforests of the sea.'", ar: "إنها تدعم آلاف الأنواع البحرية وغالباً ما يُشار إليها باسم 'غابات البحر المطيرة'."},
+    {en: "Sadly, rising sea temperatures and human activities have caused coral bleaching, putting these habitats at risk.", ar: "للأسف، تسببت درجات حرارة البحر المرتفعة والأنشطة البشرية في تبييض المرجان، مما يعرض هذه الموائل للخطر."},
+    {en: "Sea turtles are known for their long-distance migrations and their strong connection to the beach where they were born.", ar: "تُعرف السلاحف البحرية بهجراتها الطويلة وارتباطها القوي بالشاطئ الذي ولدت فيه."},
+    {en: "After hatching, baby turtles face a hard-to-survive journey to the sea.", ar: "بعد الفقس، تواجه السلاحف الصغيرة رحلة صعبة للبقاء على قيد الحياة إلى البحر."},
+    {en: "Many do not make it.", ar: "الكثير منها لا ينجو."},
+    {en: "Marine biologists work hard to protect the ocean.", ar: "يعمل علماء الأحياء البحرية بجد لحماية المحيط."},
+    {en: "They study fast-changing environments and create awareness about conservation.", ar: "يدرسون البيئات سريعة التغير ويخلقون الوعي حول الحفظ."},
+    {en: "Protecting marine life is not just important—it's life-saving.", ar: "حماية الحياة البحرية ليست مجرد أمر مهم - بل هي منقذة للحياة."},
+    {en: "It's clear that we cannot afford to underestimate the value of the ocean, if we turn a blind eye to the damage being done, we might find ourselves in deep water—literally and figuratively.", ar: "من الواضح أنه لا يمكننا تحمل التقليل من قيمة المحيط، إذا غضضنا الطرف عن الضرر الذي يحدث، فقد نجد أنفسنا في ورطة كبيرة - حرفياً ومجازياً."}
+];
+
+// 8. Listening Text
+const listeningText = [
+    {en: "The underwater world is full of beauty and wonders. It's a fascinating and little-known place.", ar: "العالم تحت الماء مليء بالجمال والعجائب. إنه مكان رائع وغير معروف إلى حد كبير."},
+    {en: "Beneath the surface of the deep blue oceans, there are brightly colored corals, strange-looking plants, and thousands of amazing sea creatures.", ar: "تحت سطح المحيطات الزرقاء العميقة، هناك شعاب مرجانية ذات ألوان زاهية، ونباتات غريبة الشكل، وآلاف المخلوقات البحرية المذهلة."},
+    {en: "Scientists emphasize that the ocean is full of life, even more than the land we live on.", ar: "يؤكد العلماء أن المحيط مليء بالحياة، حتى أكثر من الأرض التي نعيش عليها."},
+    {en: "Every deep-sea journey shows us new wonders from this hidden world.", ar: "كل رحلة إلى أعماق البحر تُظهر لنا عجائب جديدة من هذا العالم المخفي."},
+    {en: "In warm tropical seas, brightly colored fish swim through coral reefs, while slow-moving turtles glide gracefully through the water.", ar: "في البحار الاستوائية الدافئة، تسبح الأسماك ذات الألوان الزاهية عبر الشعاب المرجانية، بينما تسبح السلاحف بطيئة الحركة برشاقة عبر الماء."},
+    {en: "Dolphins use high-pitched sounds to talk to one another, and whales sing long-distance songs that can travel for miles.", ar: "تستخدم الدلافين أصواتاً عالية النبرة للتحدث مع بعضها البعض، وتغني الحيتان أغاني بعيدة المدى يمكنها السفر لأميال."},
+    {en: "Deeper in the ocean, the water becomes ice-cold and really dark.", ar: "في أعماق المحيط، يصبح الماء بارداً مثل الجليد ومظلماً حقاً."},
+    {en: "Unusual creatures survive there, some with light-producing bodies that help them find food.", ar: "تعيش هناك مخلوقات غير عادية، بعضها بأجسام منتجة للضوء تساعدها في العثور على الطعام."},
+    {en: "Sadly, the underwater world faces many human-made problems.", ar: "للأسف، يواجه العالم تحت الماء العديد من المشاكل التي من صنع الإنسان."},
+    {en: "Plastic-filled waters, overfishing, and fast-rising temperatures damage marine life.", ar: "المياه المليئة بالبلاستيك، والصيد الجائر، وارتفاع درجات الحرارة بسرعة تلحق الضرر بالحياة البحرية."},
+    {en: "Coral reefs are dying, and sea animals are losing their safe spaces.", ar: "الشعاب المرجانية تموت، وحيوانات البحر تفقد مساحاتها الآمنة."},
+    {en: "To protect this fragile but beautiful environment, countries build protected marine areas.", ar: "لحماية هذه البيئة الهشة ولكن الجميلة، تبني الدول مناطق بحرية محمية."},
+    {en: "Scientists study endangered species, and people are encouraged to use eco-friendly habits like recycling.", ar: "يدرس العلماء الأنواع المهددة بالانقراض، ويُشجع الناس على استخدام عادات صديقة للبيئة مثل إعادة التدوير."},
+    {en: "Working together, we can keep the underwater world safe for future generations.", ar: "من خلال العمل معاً، يمكننا الحفاظ على العالم تحت الماء آمناً للأجيال القادمة."}
+];
+
+// 9. Definitions
+const definitionsData = [
+    {word: "awe-inspiring", def: "causing a feeling of great respect, wonder, and amazement"},
+    {word: "coordinated", def: "organized to work together smoothly"},
+    {word: "detect", def: "to discover or notice something"},
+    {word: "endangered", def: "a species that is at risk of becoming extinct"},
+    {word: "figuratively", def: "not literally; using words in a metaphorical way to create a strong image"},
+    {word: "glow-producing", def: "something that makes its own light"},
+    {word: "hatch", def: "(for an animal/bird) to break out of an egg"},
+    {word: "in deep water", def: "to be in a difficult or serious situation"},
+    {word: "literally", def: "in an exact, real, or actual way; word for word"},
+    {word: "mind-blowing", def: "extremely surprising or amazing; hard to believe"}
+];
+
+// ===================== بناء الواجهة (ترتيب واحد) =====================
+function buildAllSections() {
+    const container = document.getElementById('mainContainer');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                const wordHtml = makeWordSpans(enText);
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">${wordHtml}</div>`;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    let html = '';
+
+    // 1. Key Vocabulary
+    html += `<div class="section-block" id="secKeyVocab">
+        <div class="sec-title">💊 Key Vocabulary</div>
+        <div class="sec-body">
+            ${playBar('secKeyVocab')}
+            <div class="info-box"><div class="info-title">Key Vocabulary</div><div class="vocab">${makePills(keyVocab, 'secKeyVocab')}</div></div>
+        </div>
+    </div>`;
+
+    // 2. Vocabulary on Reading & Listening
+    html += `<div class="section-block" id="secFullVocab">
+        <div class="sec-title">📚 Vocabulary on Reading & Listening</div>
+        <div class="sec-body">
+            ${playBar('secFullVocab')}
+            <div class="info-box"><div class="info-title">Vocabulary on Reading & Listening Texts</div><div class="vocab">${makePills(l1l2Vocab, 'secFullVocab')}</div></div>
+        </div>
+    </div>`;
+
+    // 3. Phrases, Expressions & Idioms
+    html += `<div class="section-block" id="secPhrases">
+        <div class="sec-title">💬 Phrases, Expressions & Idioms</div>
+        <div class="sec-body">
+            ${playBar('secPhrases')}
+            <div class="rules-grid">${phrasesData.map((e,i) => makeRuleItem('💡', 'secPhrases', i, e[0], e[1], e[0])).join('')}</div>
+        </div>
+    </div>`;
+
+    // 4. Prepositions
+    html += `<div class="section-block" id="secPrepositions">
+        <div class="sec-title">🔗 Prepositions</div>
+        <div class="sec-body">
+            ${playBar('secPrepositions')}
+            <div class="rules-grid">${prepositionsData.map((p,i) => makeRuleItem('🔗', 'secPrepositions', i, p[0], p[1], p[0])).join('')}</div>
+        </div>
+    </div>`;
+
+    // 5. Derivatives
+    html += `<div class="section-block" id="secDerivatives">
+        <div class="sec-title">🔨 Derivatives</div>
+        <div class="sec-body">
+            ${playBar('secDerivatives')}
+            <div class="rules-grid">${derivativesData.map((d,i) => {
+                const formsStr = d.forms.join(" | ");
+                const speakText = `${d.word} | ${formsStr}`;
+                const displayText = `${d.word} → ${formsStr}`;
+                return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+            }).join('')}</div>
+        </div>
+    </div>`;
+
+    // 6. Synonyms & Antonyms
+    html += `<div class="section-block" id="secSynonyms">
+        <div class="sec-title">⚖️ Synonyms & Antonyms</div>
+        <div class="sec-body">
+            ${playBar('secSynonyms')}
+            <div class="rules-grid">${synAntData.map((s,i) => {
+                const speakText = cleanForSpeech(s.word) + " | " + s.syn + " | " + s.ant;
+                return makeRuleItem('⚖️', 'secSynonyms', i, speakText, `${s.syn} | ${s.ant}`, s.word + " | " + s.syn + " | " + s.ant);
+            }).join('')}</div>
+        </div>
+    </div>`;
+
+    // 7. Reading Text
+    html += `<div class="section-block" id="secRead">
+        <div class="sec-title">📖 Reading Text</div>
+        <div class="sec-body">
+            ${playBar('secRead')}
+            ${makeStorySection('The Underwater World', readingText)}
+        </div>
+    </div>`;
+
+    // 8. Listening Text
+    html += `<div class="section-block" id="secListen">
+        <div class="sec-title">🎧 Listening Text</div>
+        <div class="sec-body">
+            ${playBar('secListen')}
+            ${makeStorySection('Into the Depth of the Ocean', listeningText)}
+        </div>
+    </div>`;
+
+    // 9. Definitions
+    html += `<div class="section-block" id="secDefs">
+        <div class="sec-title">📝 Definitions</div>
+        <div class="sec-body">
+            ${playBar('secDefs')}
+            <div class="rules-grid">${definitionsData.map((d,i) => {
+                const speakText = cleanForSpeech(d.word) + " | " + d.def;
+                return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+            }).join('')}</div>
+        </div>
+    </div>`;
+
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    if(!sec) return;
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

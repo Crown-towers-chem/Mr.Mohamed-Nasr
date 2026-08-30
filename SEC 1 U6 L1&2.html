@@ -1,0 +1,668 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Mohamed Abd El-Hakim Nasr</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201063383676" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01063383676
+    </a>
+    <a href="https://wa.me/+201063383676" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Sec 1 - Unit 6: The Modern Job Hunt (Lessons 1 & 2)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .sentence .speaker-label{display:inline-block;font-weight:900;color:var(--A2);margin-right:10px;background:var(--blue4);padding:2px 10px;border-radius:20px;font-size:0.9rem;}
+        .pill.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .rule-item.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">💼</span><h1>Unit 6: The Modern Job Hunt & Job Interview</h1><p class="sub">Sec 1 - Lessons 1 & 2</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container">
+    <div id="sections-container"></div>
+</main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+// ===================== بيانات المحتوى (Sec 1 - Unit 6 - Lessons 1 & 2) =====================
+
+// 1. Key Vocabulary
+const keyVocab = [
+    ["association (n)", "منظمة / جمعية"],
+    ["approach (n)", "طريقة / نهج"],
+    ["attitude (n)", "اتجاه / شعور / موقف"],
+    ["check-ins (n)", "اجتماعات متابعة"],
+    ["clear-headed (adj)", "صافي الذهن"],
+    ["common ground (n)", "أرضية مشتركة"],
+    ["department (n)", "قسم"],
+    ["footprint (n)", "بصمة"],
+    ["generic (adj)", "عام"],
+    ["implement (v) (ed)", "ينفذ / يطبق"],
+    ["impressive (adj)", "مؤثر / مبهر"],
+    ["independently (adv)", "بشكل مستقل"],
+    ["innovative (adj)", "مبدع / مبتكر"],
+    ["mentor (n)", "مرشد"],
+    ["polished (adj)", "لامع / جذاب"],
+    ["resume (n)", "سيرة ذاتية"],
+    ["silos (n)", "صوامع (فرق عمل معزولة)"],
+    ["stakeholders (n)", "مساهمون"],
+    ["trends (n)", "اتجاهات / ترندات"]
+];
+
+// 2. Vocabulary on Reading & Listening
+const l1l2Vocab = [
+    ["application (n)", "طلب توظيف"],
+    ["assessment (n)", "تقييم"],
+    ["behavioral (adj)", "سلوكي"],
+    ["candidate (n)", "مرشح"],
+    ["challenging (adj)", "صعب / محفز"],
+    ["client (n)", "عميل / زبون"],
+    ["conferences (n)", "مؤتمرات"],
+    ["colleague (n)", "زميل"],
+    ["crisis (n)", "أزمة"],
+    ["currently (adv)", "حالياً"],
+    ["customize (v) (d)", "يخصص"],
+    ["deadline (n)", "الموعد النهائي"],
+    ["decade (n)", "عقد (عشر سنوات)"],
+    ["employment (n)", "توظيف"],
+    ["event (n)", "حدث"],
+    ["format (n)", "شكل / تنسيق"],
+    ["former (adj)", "سابق"],
+    ["highlight (v) (ed)", "يظهر / يبرز"],
+    ["hire (v) (d)", "يوظف"],
+    ["hunt (n) (v) (ed)", "يبحث / يبحث بصياد"],
+    ["interview (n)", "مقابلة شخصية / حوار"],
+    ["involve (v) (d)", "يُشرك"],
+    ["keyword (n)", "كلمة مفتاحية"],
+    ["launch (v) (ed)", "يطلق / يدشن"],
+    ["long-term (adj)", "طويل المدى"],
+    ["maintain (v) (ed)", "يحافظ على / يواصل"],
+    ["modify (v) (ied)", "يعدل"],
+    ["multiple (adj)", "متعدد"],
+    ["networking (n)", "تواصل (مهني)"],
+    ["position (n)", "وظيفة / منصب"],
+    ["presence (n)", "حضور"],
+    ["professional (adj)", "مهني / احترافي"],
+    ["profile (n)", "الملف الشخصي"],
+    ["recommendation (n)", "توصية"],
+    ["relationship (n)", "علاقة"],
+    ["relevant (adj)", "ذات صلة"],
+    ["response (n)", "استجابة"],
+    ["regular (adj)", "منتظم"],
+    ["round (n)", "جولة"],
+    ["sample (n)", "عينة / نموذج"],
+    ["screen (v) (ed)", "ينتقي / يبحث"],
+    ["seek (v)", "يبحث عن"],
+    ["session (n)", "جلسة"],
+    ["specific (adj)", "محدد"],
+    ["strategy (n)", "استراتيجية"],
+    ["strength (n)", "قوة / نقاط قوة"],
+    ["submit (v) (ed)", "يرسل / يقدم"],
+    ["transform (v) (ed)", "يحول / يتحول"],
+    ["updated (adj)", "مُحدث"],
+    ["weakness (n)", "ضعف / نقاط ضعف"]
+];
+
+// 3. Phrases, Expressions & Idioms
+const phrasesData = [
+    ["achieve goals", "يحقق الأهداف"],
+    ["bring people together", "يجمع الناس معاً"],
+    ["get the right job", "يحصل على الوظيفة المناسبة"],
+    ["in the long run", "على المدى البعيد"],
+    ["keep a positive attitude", "يحافظ على موقف إيجابي"],
+    ["land the right opportunity", "يحصل على الفرصة المناسبة"],
+    ["make contact", "يقوم بالتواصل"],
+    ["make or break your chances", "يصنع أو يدمر فرصك"],
+    ["meet a tight deadline", "يلتزم بموعد نهائي ضيق"],
+    ["over the past decade", "خلال العقد الماضي"],
+    ["spend too much time on", "يقضي وقتاً طويلاً في"],
+    ["stay calm", "يحافظ على الهدوء"],
+    ["work under pressure", "يعمل تحت ضغط"],
+    ["working in silos", "يعمل في عزلة (بدون تواصل)"]
+];
+
+// 4. Prepositions
+const prepositionsData = [
+    ["apply to", "يتقدم لـ"],
+    ["focus on", "يركز على"],
+    ["give way to", "يفسح المجال لـ"],
+    ["learn from", "يتعلم من"],
+    ["specialize in", "يتخصص في"],
+    ["spend time on", "يقضي وقتاً في"],
+    ["walk into", "يدخل إلى"]
+];
+
+// 5. Special Job Collocations
+const jobCollocationsData = [
+    ["career coach", "مدرب / مستشار مهني"],
+    ["career goals", "أهداف مهنية"],
+    ["cross-department projects", "مشاريع مشتركة بين الأقسام"],
+    ["customer engagement", "تفاعل العملاء"],
+    ["digital footprint", "البصمة الرقمية"],
+    ["dream job", "وظيفة الأحلام"],
+    ["industry event", "فعاليات في مجال الصناعة"],
+    ["job description", "وصف الوظيفة"],
+    ["job hunter", "الباحث عن عمل"],
+    ["job market", "سوق العمل"],
+    ["job postings", "إعلانات الوظائف"],
+    ["job seekers", "الباحثون عن عمل"],
+    ["job search", "البحث عن وظيفة"],
+    ["job vacancies", "وظائف شاغرة"],
+    ["phone screenings", "اختبارات / مقابلات هاتفية"],
+    ["video interview", "مقابلة فيديو"]
+];
+
+// 6. Derivatives
+const derivativesData = [
+    {word: "apply", forms: ["apply (v) → application/applicant (n)", "applicable (adj)"], ex: "I have applied to the job. / My application was accepted. / The rules are applicable to everyone."},
+    {word: "associate", forms: ["associate (v) → association/associate (n)", "associated (adj)"], ex: "I associate him with success. / She is a member of the association. / The risks associated with the job."},
+    {word: "compete", forms: ["compete (v) → competition/competitor (n)", "competitive (adj)"], ex: "Many candidates compete for the job. / The competition was tough. / We need a competitive salary."},
+    {word: "customize", forms: ["customize (v) → customization (n)", "customized (adj)"], ex: "You can customize the resume. / The customization took time. / It's a customized package."},
+    {word: "employ", forms: ["employ (v) → employment/employee/employer (n)", "employable (adj)"], ex: "The company employs 50 people. / Employment rates are rising. / She is a great employee. / He is highly employable."},
+    {word: "implement", forms: ["implement (v) → implementation (n)", "implemented (adj)"], ex: "We implemented the new policy. / The implementation was successful. / It's a fully implemented plan."},
+    {word: "innovate", forms: ["innovate (v) → innovation/innovator (n)", "innovative (adj)"], ex: "We need to innovate to stay ahead. / His innovation saved the project. / She is an innovative leader."},
+    {word: "modify", forms: ["modify (v) → modification (n)", "modified (adj)"], ex: "We modified the design. / The modification was necessary. / The modified version works better."},
+    {word: "polish", forms: ["polish (v) → polishing (n)", "polished (adj)"], ex: "He polished his speech. / Polishing the resume is important. / He presented a polished argument."},
+    {word: "qualify", forms: ["qualify (v) → qualification (n)", "qualified (adj)"], ex: "She qualified for the job. / She has excellent qualifications. / He is a highly qualified candidate."},
+    {word: "respond", forms: ["respond (v) → response (n)", "responsive (adj)"], ex: "The customer service team will respond to your inquiry within 24 hours. / Her thoughtful response impressed the interviewer. / The new smartphone is highly responsive to touch commands."}
+];
+
+// 7. Synonyms & Antonyms
+const synAntData = [
+    {word: "clear-headed", syn: "focused/alert/level-headed", ant: "confused/distracted/irrational"},
+    {word: "generic", syn: "general/common", ant: "specific/unique"},
+    {word: "highlight", syn: "emphasize/spotlight", ant: "downplay/ignore"},
+    {word: "impressive", syn: "remarkable/awesome", ant: "ordinary/dull"},
+    {word: "independently", syn: "autonomously/individually", ant: "dependently/collaboratively"},
+    {word: "innovative", syn: "pioneering/creative", ant: "conventional/traditional"},
+    {word: "modify", syn: "change/adjust", ant: "preserve/maintain"},
+    {word: "polished", syn: "shining/elegant", ant: "dull/rough"},
+    {word: "regular", syn: "routine/consistent", ant: "irregular/occasional"},
+    {word: "specific", syn: "particular/exact", ant: "vague/general"}
+];
+
+// 8. Reading Text
+const readingText = [
+    {en: "The job market has transformed greatly over the past decade. Traditional methods of finding employment—such as reading a newspaper or walking into offices with a resume in hand—have largely given way to digital platforms and networking strategies.", ar: "لقد تحول سوق العمل بشكل كبير خلال العقد الماضي. لقد حلت المنصات الرقمية واستراتيجيات التواصل محل الأساليب التقليدية للعثور على عمل - مثل قراءة جريدة أو الدخول إلى المكاتب ومعك سيرة ذاتية."},
+    {en: "Today's job seekers must maintain a professional online presence. This means having an updated LinkedIn profile, a polished resume, and sometimes even a personal website showing their skills.", ar: "يجب على الباحثين عن عمل اليوم الحفاظ على حضور مهني عبر الإنترنت. وهذا يعني وجود ملف شخصي محدث على LinkedIn، وسيرة ذاتية لامعة، وأحياناً حتى موقع ويب شخصي يظهر مهاراتهم."},
+    {en: "Employers often screen candidates online before making contact, so your digital footprint can make or break your chances.", ar: "غالباً ما يقوم أصحاب العمل بفحص المرشحين عبر الإنترنت قبل الاتصال، لذا فإن بصمتك الرقمية يمكن أن تصنع أو تحطم فرصك."},
+    {en: "Many positions are filled through personal connections rather than public job postings. Attending industry events, joining professional associations, and maintaining relationships with former colleagues can open doors that traditional applications cannot.", ar: "يتم شغل العديد من المناصب من خلال الاتصالات الشخصية بدلاً من إعلانات الوظائف العامة. حضور الفعاليات الصناعية، والانضمام إلى الجمعيات المهنية، والحفاظ على العلاقات مع الزملاء السابقين يمكن أن يفتح أبواباً لا تستطيع الطلبات التقليدية فتحها."},
+    {en: "The days of sending the same generic resume to multiple employers are gone. Successful job hunters modify their applications to each specific role, highlighting relevant experience and using keywords from the job description. This personalized approach increases the chances of getting noticed.", ar: "لقد ولت أيام إرسال نفس السيرة الذاتية العامة إلى العديد من أصحاب العمل. يعدل الباحثون عن عمل ناجحون طلباتهم لتتناسب مع كل دور محدد، مع إبراز الخبرة ذات الصلة واستخدام الكلمات الرئيسية من الوصف الوظيفي. يزيد هذا النهج الشخصي من فرص ملاحظتهم."},
+    {en: "Modern interviews often involve multiple rounds, including phone screenings, and video interviews. Some companies even use skills-based assessments or ask candidates to complete sample projects.", ar: "غالباً ما تتضمن المقابلات الحديثة جولات متعددة، بما في ذلك الفحوصات الهاتفية والمقابلات عبر الفيديو. تستخدم بعض الشركات حتى تقييمات قائمة على المهارات أو تطلب من المرشحين إكمال مشاريع نموذجية."},
+    {en: "The job search process can be challenging. It's not uncommon for qualified candidates to apply to dozens of positions before landing the right opportunity.", ar: "يمكن أن تكون عملية البحث عن وظيفة صعبة. ليس من غير المألوف أن يتقدم المرشحون المؤهلون إلى عشرات المناصب قبل الحصول على الفرصة المناسبة."},
+    {en: "Keeping a positive attitude and learning from each experience is important for long-term success.", ar: "الحفاظ على موقف إيجابي والتعلم من كل تجربة أمر مهم للنجاح على المدى الطويل."}
+];
+
+// 9. Listening Text (Extracts 1, 2 & 3)
+const listeningText = [
+    {en: "Extract 1 - Interviewer: What would you say is your greatest strength?", ar: "المقتطف 1 - المحاور: ما الذي تعتبره أعظم نقاط قوتك؟"},
+    {en: "Candidate: My greatest strength is teamwork. In my last role, I led a project that brought together different departments like marketing, IT, and sales.", ar: "المرشح: أعظم نقاط قوتي هي العمل الجماعي. في دوري الأخير، قمت بقيادة مشروع جمع أقساماً مختلفة مثل التسويق وتكنولوجيا المعلومات والمبيعات."},
+    {en: "By listening to concerns and finding common ground, we avoided working in silos, improved communication, and achieved an impressive 25% increase in customer engagement.", ar: "من خلال الاستماع إلى المخاوف وإيجاد أرضية مشتركة، تجنبنا العمل في صوامع، وحسنا التواصل، وحققنا زيادة مذهلة بنسبة 25% في تفاعل العملاء."},
+    {en: "Interviewer: And what is an area you'd like to improve?", ar: "المحاور: وما هو المجال الذي ترغب في تحسينه؟"},
+    {en: "Candidate: Sometimes I spend too much time on details. I'm working on focusing on the bigger picture more quickly and trusting my team to work more independently while I support them with regular check-ins.", ar: "المرشح: أحياناً أقضي الكثير من الوقت في التفاصيل. أعمل على التركيز على الصورة الأكبر بسرعة أكبر والثقة في فريقي للعمل بشكل أكثر استقلالية بينما أدعمهم باجتماعات متابعة منتظمة."},
+    {en: "Extract 2 - Interviewer: Tell me about a time you worked under pressure.", ar: "المقتطف 2 - المحاور: أخبرني عن وقت عملت فيه تحت الضغط."},
+    {en: "Candidate: A main client nearly cancelled their contract two days before a product launch. I organized an emergency meeting with all the stakeholders, made a detailed action plan, and coordinated directly with the client.", ar: "المرشح: كاد عميل رئيسي أن يلغي عقده قبل يومين من إطلاق المنتج. نظمت اجتماعاً طارئاً مع جميع أصحاب المصلحة، ووضعت خطة عمل مفصلة، ونسقت مباشرة مع العميل."},
+    {en: "By implementing the plan step by step and finding innovative solutions, we saved the contract and even expanded it by 15%.", ar: "من خلال تنفيذ الخطة خطوة بخطوة وإيجاد حلول مبتكرة، أنقذنا العقد وقمنا بتوسيعه بنسبة 15%."},
+    {en: "Interviewer: How did you handle the stress?", ar: "المحاور: كيف تعاملت مع التوتر؟"},
+    {en: "Candidate: I broke the problem into small tasks, kept everyone informed with quick check-ins, and took short breaks to stay clear-headed.", ar: "المرشح: قسمت المشكلة إلى مهام صغيرة، وأبقيت الجميع على اطلاع باجتماعات متابعة سريعة، وأخذت فترات راحة قصيرة للبقاء صافي الذهن."},
+    {en: "Extract 3 - Interviewer: Where do you see yourself in five years?", ar: "المقتطف 3 - المحاور: أين ترى نفسك بعد خمس سنوات؟"},
+    {en: "Candidate: I want to develop leadership skills, specialize in digital marketing, and be a mentor to others.", ar: "المرشح: أريد تطوير مهارات القيادة، والتخصص في التسويق الرقمي، وأن أكون مرشداً للآخرين."},
+    {en: "I'm currently studying digital marketing, leading training sessions, and attending conferences to keep up with AI and new trends.", ar: "أنا حالياً أدرس التسويق الرقمي، وأقود جلسات تدريبية، وأحضر المؤتمرات لمواكبة الذكاء الاصطناعي والاتجاهات الجديدة."}
+];
+
+// 10. Definitions
+const definitionsData = [
+    {word: "association", def: "a group of people with a common purpose"},
+    {word: "attitude", def: "the way of thinking about something; how you react to people or situations"},
+    {word: "check-ins", def: "short meetings or updates to see how things are going"},
+    {word: "clear-headed", def: "staying calm and thinking clearly"},
+    {word: "common ground", def: "shared ideas or interests that bring people together"},
+    {word: "department", def: "a section of a company or organization that deals with a specific job"},
+    {word: "footprint", def: "the mark or impact something leaves behind"},
+    {word: "generic", def: "general or plain; not special or specific"},
+    {word: "implementing", def: "putting a plan, idea, or system into action"},
+    {word: "impressive", def: "something that makes you feel admiration because it is very good or skillful"},
+    {word: "independently", def: "doing something on your own, without needing help or control from others"},
+    {word: "innovative", def: "using new and creative ideas to solve problems or make things better"},
+    {word: "mentor", def: "a person who guides and supports someone less experienced"},
+    {word: "polished", def: "made to look smooth, professional, or refined; something that has been improved to look better"},
+    {word: "resume", def: "a document that lists your work experience, education, and skills, used when applying for jobs"},
+    {word: "silos", def: "teams or departments that work in isolation, not sharing information with others"},
+    {word: "stakeholders", def: "people or groups who care about or are affected by a company or project"},
+    {word: "trends", def: "current directions or changes in an industry"}
+];
+
+// ===================== دوال HTML المساعدة =====================
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+// ===================== بناء الواجهة =====================
+function buildAllSections() {
+    const container = document.getElementById('sections-container');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        const speakerEmojis = {
+            "Interviewer": "🎙️",
+            "Candidate": "🧑‍💼"
+        };
+
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let speaker = '';
+                let dialogueText = enText;
+                const colonIndex = enText.indexOf(': ');
+                if (colonIndex > 0) {
+                    speaker = enText.substring(0, colonIndex);
+                    dialogueText = enText.substring(colonIndex + 2);
+                }
+                const emoji = speakerEmojis[speaker] || '📖';
+                const wordHtml = makeWordSpans(dialogueText);
+                let speakerHtml = '';
+                if (speaker) {
+                    speakerHtml = `<span class="speaker-label">${emoji} ${speaker}</span> `;
+                }
+                return `<div class="sentence" id="${id}" data-speak="${s.en}" onclick="playOne('${id}')">
+                    ${speakerHtml} ${wordHtml}
+                </div> `;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    const sections = [];
+
+    // 1. Key Vocabulary
+    if (typeof keyVocab !== 'undefined' && keyVocab.length > 0) {
+        sections.push({ title:"💊 Key Vocabulary", id:"secKeyVocab", content: `<div class="info-box"><div class="info-title">Key Vocabulary</div><div class="vocab">${makePills(keyVocab, "secKeyVocab")}</div></div>` });
+    }
+
+    // 2. Vocabulary on Reading & Listening
+    if (typeof l1l2Vocab !== 'undefined' && l1l2Vocab.length > 0) {
+        sections.push({ title:"📚 Vocabulary on Reading & Listening", id:"secL1L2", content: `<div class="info-box"><div class="info-title">Vocabulary on Reading & Listening Texts</div><div class="vocab">${makePills(l1l2Vocab, "secL1L2")}</div></div>` });
+    }
+
+    // 3. Phrases, Expressions & Idioms
+    if (typeof phrasesData !== 'undefined' && phrasesData.length > 0) {
+        sections.push({ title:"💬 Phrases, Expressions & Idioms", id:"secPhrases", content: `<div class="rules-grid">${phrasesData.map((e,i) => makeRuleItem('💡', 'secPhrases', i, e[0], e[1], e[0])).join('')}</div>` });
+    }
+
+    // 4. Prepositions
+    if (typeof prepositionsData !== 'undefined' && prepositionsData.length > 0) {
+        sections.push({ title:"🔗 Prepositions", id:"secPrepositions", content: `<div class="rules-grid">${prepositionsData.map((p,i) => makeRuleItem('🔗', 'secPrepositions', i, p[0], p[1], p[0])).join('')}</div>` });
+    }
+
+    // 5. Special Job Collocations
+    if (typeof jobCollocationsData !== 'undefined' && jobCollocationsData.length > 0) {
+        sections.push({ title:"🔗 Special Job Collocations", id:"secJobCollocations", content: `<div class="rules-grid">${jobCollocationsData.map((c,i) => makeRuleItem('🔗', 'secJobCollocations', i, c[0], c[1], c[0])).join('')}</div>` });
+    }
+
+    // 6. Derivatives
+    if (typeof derivativesData !== 'undefined' && derivativesData.length > 0) {
+        sections.push({ title:"🔨 Derivatives (Word Families)", id:"secDerivatives", content: `<div class="rules-grid">${derivativesData.map((d,i) => {
+            const formsStr = d.forms.join(" | ");
+            const speakText = `${d.word} | ${formsStr}`;
+            const displayText = `${d.word} → ${formsStr}`;
+            return makeRuleItem('🔨', 'secDerivatives', i, speakText, d.ex, displayText);
+        }).join('')}</div>` });
+    }
+
+    // 7. Synonyms & Antonyms
+    if (typeof synAntData !== 'undefined' && synAntData.length > 0) {
+        sections.push({ title:"⚖️ Synonyms & Antonyms", id:"secSynAnt", content: `<div class="rules-grid">${synAntData.map((s,i) => {
+            const speakText = cleanForSpeech(s.word) + " | " + s.syn + " | " + s.ant;
+            return makeRuleItem('⚖️', 'secSynAnt', i, speakText, `${s.syn} | ${s.ant}`, s.word + " | " + s.syn + " | " + s.ant);
+        }).join('')}</div>` });
+    }
+
+    // 8. Reading Text
+    if (typeof readingText !== 'undefined' && readingText.length > 0) {
+        sections.push({ title:"📖 Reading Text", id:"secRead", content: makeStorySection("The Modern Job Hunt", readingText) });
+    }
+
+    // 9. Listening Text
+    if (typeof listeningText !== 'undefined' && listeningText.length > 0) {
+        sections.push({ title:"🎧 Listening Text", id:"secListen", content: makeStorySection("Job Interview - Three Extracts", listeningText) });
+    }
+
+    // 10. Definitions
+    if (typeof definitionsData !== 'undefined' && definitionsData.length > 0) {
+        sections.push({ title:"📝 Definitions", id:"secDefs", content: `<div class="rules-grid">${definitionsData.map((d,i) => {
+            const speakText = cleanForSpeech(d.word) + " | " + d.def;
+            return makeRuleItem('📖', 'secDefs', i, speakText, d.def, d.word);
+        }).join('')}</div>` });
+    }
+
+    let html = '';
+    sections.forEach(sec => {
+        html += `<div class="section-block" id="${sec.id}">
+            <div class="sec-title">${sec.title}</div>
+            <div class="sec-body">
+                ${playBar(sec.id)}
+                ${sec.content}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>

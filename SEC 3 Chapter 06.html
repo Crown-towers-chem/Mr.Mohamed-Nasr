@@ -1,0 +1,473 @@
+﻿<div style="position:sticky; top:0; background-color:#ffffff; padding:15px 0; text-align:center; font-family:Arial, sans-serif; box-shadow:0 4px 6px rgba(0,0,0,0.1); z-index:1000; display:flex; flex-direction:column; align-items:center;">
+  <h3 style="margin:2px 0; color:#333; text-align:center;">Mr. Mohamed Abd El-Hakim Nasr</h2>
+
+  <div style="margin-top:8px;">
+    <a href="tel:+201063383676" style="display:inline-block; background-color:#007BFF; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      📞 01063383676
+    </a>
+    <a href="https://wa.me/+201063383676" target="_blank" style="display:inline-block; background-color:#25D366; color:#fff; padding:8px 16px; margin:3px; border-radius:5px; text-decoration:none; font-weight:bold;">
+      💬 تواصل عبر الواتس
+    </a>
+  </div>
+</div><!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>The Count of Monte Cristo - Chapter 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --A: #1e3a8a; --A2: #1e40af; --blue4: #dbeafe; --blue5: #f8fafc;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --radius: 12px; --stop: #ef4444; --pause: #94a3b8;
+            --highlight-bg: rgba(30, 58, 138, 0.08);
+            --word-highlight: #fde047;
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="ocean"] {
+            --A: #0e7490; --A2: #0891b2; --blue4: #cffafe; --blue5: #f0fdfa;
+            --text: #1E293B; --text2: #64748B; --card: #ffffff; --border: #e2e8f0;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(14, 116, 144, 0.08);
+            --fab-bg: #0e7490; --fab-text: #ffffff;
+        }
+        [data-theme="slate"] {
+            --A: #334155; --A2: #475569; --blue4: #e2e8f0; --blue5: #f8fafc;
+            --text: #0f172a; --text2: #475569; --card: #ffffff; --border: #cbd5e1;
+            --bg: #f1f5f9; --stop: #ef4444; --highlight-bg: rgba(51, 65, 85, 0.1);
+            --fab-bg: #1e293b; --fab-text: #ffffff;
+        }
+        [data-theme="dark"] {
+            --A: #2dd4bf; --A2: #0d9488; --blue4: #134e4a; --blue5: #0f172a;
+            --text: #f8fafc; --text2: #94a3b8; --card: #1e293b; --border: #334155;
+            --bg: #0f172a; --stop: #f87171; --pause: #64748b; --highlight-bg: rgba(45, 212, 191, 0.15);
+            --word-highlight: #facc15; --fab-bg: #facc15; --fab-text: #1e293b;
+        }
+        *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+        body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:100px;overflow-x:hidden;transition:background .3s,color .3s;}
+        
+        /* Hero */
+        .hero{color:#fff;text-align:center;padding:32px 20px 26px;margin-bottom:24px;background:linear-gradient(135deg, #0f172a, var(--A2)); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+        .hero .emoji-big{font-size:3rem;display:block;margin-bottom:8px;}
+        .hero h1{font-size:1.6rem;font-weight:900;letter-spacing:0.5px;}
+        .hero .sub{font-size:.95rem;opacity:.85;margin-top:5px;font-family:'Cairo',sans-serif;font-weight:600;}
+        
+        /* Toolbar */
+        .toolbar{max-width:840px;margin:0 auto 24px;padding:0 16px;text-align:center;}
+        .toolbar-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 20px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+        .toolbar label{font-weight:800;color:var(--A);font-size:13px;}
+        input[type=range]{width:90px;accent-color:var(--A);}
+        .rate-badge{font-weight:900;font-size:13px;color:var(--A);min-width:34px;}
+        select{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-weight:600;background:var(--card);color:var(--text);}
+        .theme-switcher{display:flex;align-items:center;gap:6px;margin-left:auto;}
+        .theme-btn{-webkit-appearance:none;appearance:none;border:2px solid transparent;border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;color:#fff;letter-spacing:.5px;transition:all .2s;}
+        .theme-btn.t-teal{background:linear-gradient(135deg,#0f766e,#2dd4bf);}
+        .theme-btn.t-ocean{background:linear-gradient(135deg,#0e7490,#06b6d4);}
+        .theme-btn.t-slate{background:linear-gradient(135deg,#334155,#94a3b8);}
+        .theme-btn.t-dark{background:linear-gradient(135deg,#1e293b,#475569);color:#e2e8f0;}
+        .theme-btn.active{border-color:#fff;box-shadow:0 0 0 2px currentColor;transform:scale(1.06);}
+        
+        .container{max-width:840px;margin:auto;padding:0 16px;}
+        .section-block{background:var(--card);border-radius:var(--radius);margin-bottom:22px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);border:1px solid var(--border);}
+        .sec-title{color:#fff;font-size:.8rem;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--A),var(--A2));}
+        .sec-title::before{content:"";display:inline-block;width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%;flex-shrink:0;}
+        .sec-body{padding:18px;}
+        .sec-play-bar{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap;align-items:center;}
+        .big-btn{-webkit-appearance:none;appearance:none;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;color:#fff;display:inline-flex;align-items:center;gap:5px;transition:transform .12s;font-family:'Nunito',sans-serif;}
+        .big-btn:active{transform:scale(.95);}
+        .big-btn.pause-btn{background:var(--pause);}
+        .big-btn.stop-btn{background:var(--stop);}
+        .big-btn.play-all-btn{background:linear-gradient(135deg, var(--A), var(--A2)); margin-left: 12px;}
+        .info-box{background:var(--blue5);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:16px;}
+        .info-title{display:flex;align-items:center;gap:6px;font-weight:900;font-size:.78rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--A2);}
+        .vocab{display:flex;flex-wrap:wrap;gap:8px;}
+        .pill{padding:10px 14px;border-radius:6px;background:var(--card);border:1px solid var(--blue4);text-align:center;cursor:pointer;flex:1 1 auto;min-width:80px;transition:all .15s;}
+        .pill:active{transform:scale(.96);}
+        .pill .en{font-weight:800;font-size:14px;display:block;color:var(--A);}
+        .pill .tr{font-size:11px;color:var(--text2);font-family:'Cairo',sans-serif;font-weight:600;}
+        .story-card{background:var(--blue5);border:1px solid var(--border);border-left:4px solid var(--A);border-radius:8px;padding:18px;margin-bottom:12px;}
+        .sentence{display:block;cursor:pointer;border-radius:6px;padding:10px 12px;margin-bottom:12px;transition:background .2s;line-height:1.8;font-size:17px;font-weight:600;color:var(--text);background:rgba(255,255,255,0.4);}
+        [data-theme="dark"] .sentence { background: rgba(255,255,255,0.05); }
+        .sentence .word{transition:background 0.15s;border-radius:3px;padding:0 1px;}
+        .sentence .word.highlight{background:var(--word-highlight);}
+        .sentence.active-sent{background:var(--highlight-bg);outline:2px solid var(--A);outline-offset:1px;}
+        .story-ar{font-family:'Cairo',sans-serif;color:var(--text2);font-size:14px;text-align:right;direction:rtl;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-weight:600;line-height:2;}
+        .rules-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;}
+        .rule-item{display:flex;align-items:flex-start;gap:12px;background:var(--blue5);border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .2s;}
+        .rule-item .rule-text{flex:1;}
+        .rule-item .rule-text .en{font-size:15px;font-weight:700;color:var(--text);}
+        .rule-item .rule-text .ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text2);text-align:right;direction:rtl;font-weight:600;margin-top:4px;}
+        footer{text-align:center;margin-top:14px;padding:20px;color:var(--text2);font-size:12px;}
+        footer strong{color:var(--A);}
+        .voice-note{font-size:11px;color:#b45309;margin-top:4px;display:block;}
+        .fab-pause{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--fab-bg);color:var(--fab-text);border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);font-size:24px;display:none;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,opacity 0.2s;}
+        .fab-pause:active{transform:scale(.9);}
+        .fab-pause.show{display:flex;}
+    </style>
+</head>
+<body>
+
+<div class="hero"><span class="emoji-big">👑</span><h1>The Count of Monte Cristo</h1><p class="sub">Chapter 6: The Secret of the Treasure</p></div>
+
+<div class="toolbar"><div class="toolbar-inner">
+    <label for="rateRange">Speed</label><input id="rateRange" type="range" min="0.5" max="1.2" step="0.1" value="1"/>
+    <span class="rate-badge" id="rateBadge">1.0x</span>
+    <select id="voiceSelect" style="max-width:180px;"></select>
+    <span id="voiceNote" class="voice-note"></span>
+    <div class="theme-switcher">
+        <button class="theme-btn t-teal" onclick="setTheme('teal',this)">Teal</button>
+        <button class="theme-btn t-ocean" onclick="setTheme('ocean',this)">Ocean</button>
+        <button class="theme-btn t-slate" onclick="setTheme('slate',this)">Slate</button>
+        <button class="theme-btn t-dark" onclick="setTheme('dark',this)">Dark</button>
+    </div>
+    <button class="big-btn play-all-btn" onclick="playAll()">🔊 Play All</button>
+</div></div>
+
+<main class="container" id="mainContainer"></main>
+
+<button class="fab-pause" id="fabPause" onclick="toggleFabPause()" title="إيقاف / استئناف">⏯️</button>
+
+<script>
+// ===================== دوال مساعدة =====================
+function cleanForSpeech(text) {
+    let result = text;
+    result = result.replace(/\([^)]*\)/g, ' '); 
+    result = result.replace(/[→]/g, ' ');      
+    result = result.replace(/\s+/g, ' ').trim(); 
+    return result;
+}
+
+function makeWordSpans(text) {
+    const words = text.trim().split(/\s+/);
+    return words.map((w, idx) => `<span class="word" data-word-index="${idx}">${w}</span>`).join(' ');
+}
+
+// ===================== بيانات الفصل السادس (Chapter 6) =====================
+const ch6Vocab = [
+    ["cannonballs", "قذائف مدفع"], ["canvas", "قماش"], ["cliffs", "منحدرات صخرية"], ["corridors", "ممرات"], ["crowns", "تيجان"], ["deserted", "مهجور"], ["desperate", "يائس"], ["destiny", "مصير/قدر"], ["determination", "عزيمة/إصرار"], ["diamonds", "ألماس"], ["drowned", "غرق"], ["duty", "واجب"], ["echoed", "تردد"], ["emeralds", "زمرد"], ["exhausted", "مرهق"], ["fortress", "حصن/قلعة"], ["fortune", "ثروة/حظ"], ["greed", "جشع"], ["grief", "حزن/أسى"], ["hatred", "كراهية/حقد"], ["hollow", "أجوف"], ["icy", "جليدي/مثلج"], ["marble", "رخام"], ["measure", "قياس/مقدار"], ["nightmares", "كوابيس"], ["opportunity", "فرصة"], ["parchment", "رق/ورق قديم"], ["pickaxe", "معول/فأس"], ["plunge", "يغوص/ينغمس"], ["rope", "حبل"], ["rubies", "ياقوت أحمر"], ["sack", "كيس"], ["shipwrecked", "غريق/ناج من تحطم سفينة"], ["smuggler", "مهرب"], ["sorrow", "حزن"], ["statues", "تماثيل"], ["steel", "فولاذ"], ["stream", "جدول مائي/مجرى"], ["supplies", "مؤن/لوازم"], ["symbols", "رموز"], ["tooth", "بروز حاد"], ["trembling", "مرتجف"], ["untouchable", "لا يمس"], ["useless", "عديم الفائدة"], ["vengeance", "انتقام"], ["visions", "رؤى/تخيلات"], ["weapons", "أسلحة"]
+];
+
+const ch6Phrases = [
+    ["beyond measure", "بلا حدود"],
+    ["blinded by the brightness", "أعماه البريق"],
+    ["break the lock", "يكسر القفل"],
+    ["build a new identity", "يبنى هوية جديدة"],
+    ["buried deep underground", "مدفون بعمق تحت الأرض"],
+    ["carried him from prison to freedom", "حملته من السجن إلى الحرية"],
+    ["cut through the canvas", "قطع القماش"],
+    ["echo in his mind", "يتردد في ذهنه"],
+    ["filled with visions", "ممتلئ بالرؤى"],
+    ["from despair to destiny", "من اليأس إلى القدر"],
+    ["fueled by hope", "مدفوع بالأمل"],
+    ["guided by the stars", "يهتدي بالنجوم"],
+    ["kingdom in a box", "مملكة في صندوق"],
+    ["light in his years of darkness", "نور في سنوات ظلامه"],
+    ["path to freedom", "طريق الحرية"],
+    ["reward the good and punish the guilty", "يجازي الصالحين ويعاقب المذنبين"],
+    ["searching for the location", "يبحث عن الموقع"],
+    ["shock of water", "صدمة الماء"],
+    ["weighed down by cannonballs", "مثقل بالقذائف"]
+];
+
+const ch6Story = [
+    {en: "Edmond Dantès had lost his only friend. The death of Abbé Faria left him in deep sorrow. The priest had been his teacher, his father, and the light in his long years of darkness. But along with grief, Edmond felt a new power rising in his heart—a sense of duty, hope, and determination. The priest had given him more than knowledge: he had given him a future.", ar: "فقد إدموند دانتيس صديقه الوحيد. ترك موت الأب فاريا في قلبه حزناً عميقاً. كان الكاهن هو معلمه وأبوه والنور في سنوات ظلامه الطويلة. ولكن إلى جانب الحزن، شعر إدموند بقوة جديدة تنهض في قلبه - شعور بالواجب والأمل والإصرار. لقد أعطاه الكاهن أكثر من المعرفة: لقد أعطاه مستقبلاً."},
+    {en: "**Alone with a Secret**", ar: "**وحيداً مع سر**"},
+    {en: "For several days, Edmond sat in silence in his cell, holding the small parchment the abbé had left him. It was strange words and symbols, which described the hiding place of a great treasure hidden on the island of Monte Cristo. Each time he read the paper, his mind filled with visions: mountains of gold, bags of silver, boxes of jewels, rare statues, and crowns once worn by princes. The treasure of the Spada family was said to be beyond measure.", ar: "لعدة أيام، جلس إدموند في صمت في زنزانته، ممسكاً بالرق الصغير الذي تركه له الأب. كانت كلمات ورموزاً غريبة، وصفت مكان اختباء كنز عظيم مخبأ في جزيرة مونت كريستو. في كل مرة يقرأ فيها الورقة، يمتلئ عقله بالرؤى: جبال من الذهب، وأكياس من الفضة، وصناديق من الجواهر، وتماثيل نادرة، وتيجان كان يرتديها الأمراء ذات يوم. قيل إن كنز عائلة سبادا لا يُقدّر بثمن."},
+    {en: "At first, Edmond thought it was a dream, too fantastic to be real. But the abbé was never a liar or a fool. If he had spoken of the treasure, then it truly existed. And if it existed, Edmond swore he would find it.", ar: "في البداية، ظن إدموند أنها حلم، مبالغ فيه جداً ليكون حقيقياً. لكن الأب لم يكن كاذباً أو أحمق قط. إذا كان قد تحدث عن الكنز، فلا بد أنه موجود بالفعل. وإذا كان موجوداً، أقسم إدموند أنه سيجده."},
+    {en: "'This treasure,' he whispered to himself in the darkness, 'is not for greed. It is the tool given to me by God. With it, I shall reward the good and punish the guilty.'", ar: "'هذا الكنز،' همس لنفسه في الظلام، 'ليس من أجل الجشع. إنها الأداة التي وهبني إياها الله. بها، سأجازي الصالحين وأعاقب المذنبين.'"},
+    {en: "**The Priest's Last Lesson**", ar: "**آخر درس من الكاهن**"},
+    {en: "Edmond remembered the old priest's final words: 'Do not let hatred consume you. Use the treasure for justice, not for vengeance alone.' He repeated those words often, as if they were a prayer. Yet in his heart, anger burned like a hidden fire. Danglars, Fernand, Villefort—those names echoed in his mind. Each man had stolen his youth, his love, and his freedom. But Edmond forced himself to wait. First escape. Then treasure. Then justice.", ar: "تذكر إدموند كلمات الكاهن العجوز الأخيرة: 'لا تدع الكراهية تلتهمك. استخدم الكنز من أجل العدالة، وليس للانتقام فقط.' كرر هذه الكلمات كثيراً، وكأنها صلاة. ومع ذلك، في قلبه، كان الغضب يشتعل كالنار الخفية. دانغلار، فيرناند، فيلفور - تلك الأسماء تتردد في ذهنه. كل رجل سرق شبابه وحبه وحريته. لكن إدموند أجبر نفسه على الانتظار. الهروب أولاً. ثم الكنز. ثم العدالة."},
+    {en: "**The Plan to Escape**", ar: "**خطة الهروب**"},
+    {en: "The death of Abbé Faria gave Edmond an unexpected opportunity. One morning, as the guards carried food into his cell, he heard them speak in low voices. 'The old priest is dead,' one said. 'We'll sew him into a sack tonight and throw him into the sea.' Edmond's heart jumped. If the guards carried away a sack, perhaps he could take the abbé's place. In the darkness of night, no one would notice until it was too late.", ar: "أعطى موت الأب فاريا إدموند فرصة غير متوقعة. في صباح أحد الأيام، بينما كان الحراس يحملون الطعام إلى زنزانته، سمعهم يتحدثون بأصوات خافتة. 'لقد مات الكاهن العجوز،' قال أحدهم. 'سنخيطه في كيس الليلة ونلقيه في البحر.' قفز قلب إدموند. إذا كان الحراس سيحملون كيساً بعيداً، فربما يمكنه أن يحل محل الأب. في ظلام الليل، لن يلاحظ أحد ذلك حتى فوات الأوان."},
+    {en: "That evening, when the guards left, Edmond acted quickly. He dug into the priest's cell, found the body, and kissed his forehead one last time. Then, with trembling hands, Edmond laid the body in his own bed and covered it. Next, he slipped into the sack meant for the dead. He tied the rope from inside as best as he could, holding a sharp piece of iron in his hand to cut it later.", ar: "في ذلك المساء، عندما غادر الحراس، تصرف إدموند بسرعة. حفر في زنزانة الكاهن، ووجد الجثة، وقبّل جبهته للمرة الأخيرة. ثم، بأيدٍ مرتجفة، وضع إدموند الجثة في سريره وغطّاها. بعد ذلك، انزلق في الكيس المخصص للميت. ربط الحبل من الداخل بأفضل ما يستطيع، ممسكاً بقطعة حديد حادة في يده لقطعه لاحقاً."},
+    {en: "His heart beat wildly. If the plan failed, he would be thrown alive into the sea and drowned. But if it succeeded, freedom awaited.", ar: "خفق قلبه بعنف. إذا فشلت الخطة، سيُلقى حياً في البحر ويغرق. لكن إذا نجحت، كانت الحرية تنتظره."},
+    {en: "**The Burial at Sea**", ar: "**الدفن في البحر**"},
+    {en: "Soon, two guards entered. Without checking, they lifted the heavy sack, carried it along the corridors, and climbed to the top of the fortress wall. Edmond felt the cold night air and heard the waves below. 'Ready?' one guard asked. 'Throw him,' said the other.", ar: "سرعان ما دخل حارسان. دون تفتيش، رفعا الكيس الثقيل، وحملاه عبر الممرات، وصعدا إلى قمة سور القلعة. شعر إدموند بهواء الليل البارد وسمع الأمواج أدناه. 'هل أنت مستعد؟' سأل أحد الحراس. 'ارمِه،' قال الآخر."},
+    {en: "The sack flew into the air, and Edmond plunged into the icy sea. The shock of water nearly made him scream, but he bit his lips. Weighted down by cannonballs tied to the sack, he began to sink fast. Desperate, he cut through the canvas with his iron piece, tore the rope, and swam upward with all his strength.", ar: "طار الكيس في الهواء، وغاص إدموند في البحر الجليدي. كادت صدمة الماء أن تجعله يصرخ، لكنه عض شفتيه. مثقلاً بقذائف المدفع المربوطة بالكيس، بدأ يغوص بسرعة. في يأس، شق القماش بقطعة الحديد، ومزق الحبل، وسبح للأعلى بكل قوته."},
+    {en: "At last, his head broke the surface. He filled his lungs with air and looked back. Behind him stood the black shadow of Château d'If, the prison of his nightmares. In front of him stretched the endless sea—his path to freedom.", ar: "أخيراً، كسر رأسه سطح الماء. ملأ رئتيه بالهواء ونظر إلى الوراء. خلفه كان يقف ظل شاتو دي إف الأسود، سجن كوابيسه. أمامه امتد البحر اللامتناهي - طريقه إلى الحرية."},
+    {en: "**A Sailor Once Again**", ar: "**بحار مرة أخرى**"},
+    {en: "Edmond swam all night, guided by the stars as he had done years before as a sailor. Exhausted, he reached a small deserted island. There he rested, half-dead with hunger.", ar: "سبح إدموند طوال الليل، مسترشداً بالنجوم كما فعل قبل سنوات عندما كان بحاراً. مرهقاً، وصل إلى جزيرة صغيرة مهجورة. هناك استراح، نصف ميت من الجوع."},
+    {en: "The next morning, he saw a fishing boat passing. Using a piece of wood as a signal, he called out. The fishermen pulled him aboard. 'Who are you?' they asked. 'A poor sailor shipwrecked in the storm,' Edmond replied. It was not the full truth, but it saved him.", ar: "في صباح اليوم التالي، رأى قارب صيد يمر. مستخدماً قطعة خشب كإشارة، ناداهم. سحبه الصيادون إلى القارب. 'من أنت؟' سألوا. 'بحار فقير تحطمت سفينته في العاصفة،' أجاب إدموند. لم يكن الحقيقة كاملة، لكنها أنقذته."},
+    {en: "He worked with sailors, hiding his real identity, waiting for the chance to reach the island of Monte Cristo.", ar: "عمل مع البحارة، مخفياً هويته الحقيقية، منتظراً الفرصة للوصول إلى جزيرة مونت كريستو."},
+    {en: "**Dreams of Monte Cristo**", ar: "**أحلام مونت كريستو**"},
+    {en: "As the days turned into weeks, Edmond's mind returned again and again to the treasure. He studied the parchment endlessly, searching for the location of the mysterious island. He remembered every detail of the abbé's story: the rock formations, the hidden cave, the chest buried deep underground. At night, while the other sailors slept, Edmond whispered to himself: 'Monte Cristo... the key to my destiny.'", ar: "مع تحول الأيام إلى أسابيع، عاد عقل إدموند مراراً وتكراراً إلى الكنز. درس الرق بلا انقطاع، باحثاً عن موقع الجزيرة الغامضة. تذكر كل تفاصيل قصة الأب: التشكيلات الصخرية، الكهف المخفي، الصندوق المدفون بعمق تحت الأرض. في الليل، بينما كان البحارة الآخرون ينامون، همس إدموند لنفسه: 'مونت كريستو... مفتاح مصيري.'"},
+    {en: "**A Test of Patience**", ar: "**اختبار الصبر**"},
+    {en: "It was not easy to reach the island. Ships did not often pass there, and Edmond could not openly ask without raising suspicion. So he waited, sailing from port to port, gathering money and supplies. Then, one night, a smuggler's boat he had joined decided to land near Monte Cristo to hide goods. Edmond's heart raced. The time had come.", ar: "لم يكن الوصول إلى الجزيرة سهلاً. لم تكن السفن تمر هناك كثيراً، ولم يستطع إدموند السؤال علناً دون إثارة الشك. لذا انتظر، وأبحر من ميناء إلى ميناء، وجمع المال والمؤن. ثم، في إحدى الليالي، قرر قارب مهرب انضم إليه أن يرسو بالقرب من مونت كريستو لإخفاء البضائع. تسارع قلب إدموند. لقد حان الوقت."},
+    {en: "**The Island of Rocks**", ar: "**جزيرة الصخور**"},
+    {en: "Monte Cristo appeared on the horizon like a sharp tooth rising from the sea. Its cliffs were dark and steep, and no one lived there. To the sailors, it was a lonely, useless rock. To Edmond, it was paradise.", ar: "ظهرت مونت كريستو في الأفق كسن حاد يخرج من البحر. كانت منحدراتها مظلمة وشديدة الانحدار، ولم يكن أحد يعيش هناك. بالنسبة للبحارة، كانت صخرة وحيدة عديمة الفائدة. بالنسبة لإدموند، كانت جنة."},
+    {en: "When the others were busy unloading goods, Edmond pretended to hunt for rabbits. Carrying a pickaxe and supplies, he climbed the rocks to the secret spot described in the abbé's papers. He searched for hours, comparing the signs: a hollow rock shaped like a cross, a small stream that ran dry in summer, a fig tree growing from stone. At last, he found the place.", ar: "عندما كان الآخرون مشغولين بتفريغ البضائع، تظاهر إدموند بصيد الأرانب. حاملاً معولاً ومؤناً، تسلق الصخور إلى المكان السري الموصوف في أوراق الأب. بحث لساعات، مقارناً العلامات: صخرة مجوفة على شكل صليب، جدول صغير يجف في الصيف، شجرة تين تنمو من الحجر. أخيراً، وجد المكان."},
+    {en: "**The Hidden Chamber**", ar: "**الحجرة المخفية**"},
+    {en: "His hands trembled as he dug. The ground was hard, but his strength was fueled by hope. Soon, his pickaxe struck something solid: a wooden chest, bound with iron. With a cry, Edmond pulled it free. He broke the lock, lifted the lid—and gasped.", ar: "ارتجفت يداه وهو يحفر. كانت الأرض صلبة، لكن قوته كانت مدفوعة بالأمل. سرعان ما اصطدم معوله بشيء صلب: صندوق خشبي، مربوط بالحديد. بصرخة، سحبه إدموند بحرية. كسر القفل، رفع الغطاء - وشهق."},
+    {en: "Inside lay mountains of gold coins, silver bars, diamonds that sparkled like stars, rubies as red as emeralds, green as the sea. Statues carved in marble, crowns decorated with jewels, and weapons made of steel filled the chest.", ar: "في الداخل كانت توجد جبال من العملات الذهبية، وسبائك فضية، وماس يتلألأ مثل النجوم، وياقوت أحمر، وزمرد أخضر مثل البحر. ملأت الصندوق تماثيل منحوتة من الرخام، وتيجان مزينة بالجواهر، وأسلحة مصنوعة من الفولاذ."},
+    {en: "It was more than treasure. It was a kingdom in a box.", ar: "لقد كان أكثر من مجرد كنز. لقد كانت مملكة في صندوق."},
+    {en: "**A New Man Is Born**", ar: "**رجل جديد يولد**"},
+    {en: "For a long time, Edmond could only stare, blinded by the brightness of his fortune. Then he knelt and whispered: 'Abbé Faria, your secret lives. I am free, and I will use this gift.'", ar: "لفترة طويلة، لم يستطع إدموند سوى التحديق، أعماه بريق ثروته. ثم جثا على ركبتيه وهمس: 'الأب فاريا، سرك حي. أنا حر، وسأستخدم هذه الهبة.'"},
+    {en: "At that moment, Edmond Dantès the poor sailor died, and a new man was born—the Count of Monte Cristo.", ar: "في تلك اللحظة، مات إدموند دانتيس البحار الفقير، وولد رجل جديد - كونت مونت كريستو."},
+    {en: "With this treasure, he would build a new identity, powerful and untouchable. He would reward those who had been kind, such as his faithful friend Morrel. And he would punish those who had destroyed his life.", ar: "بهذا الكنز، سيبنى هوية جديدة، قوية ولا تُمس. سيكافئ أولئك الذين كانوا طيبين، مثل صديقه الوفي موريل. وسيعاقب أولئك الذين دمروا حياته."},
+    {en: "The sea had carried him from prison to freedom. The treasure of Monte Cristo would carry him from despair to destiny.", ar: "لقد حمله البحر من السجن إلى الحرية. كنز مونت كريستو سيحمله من اليأس إلى القدر."}
+];
+
+// ===================== بناء الواجهة (الفصل السادس فقط) =====================
+function buildAllSections() {
+    const container = document.getElementById('mainContainer');
+
+    function makePills(wordsArray, sectionId) {
+        return wordsArray.map((w, i) => {
+            const id = `${sectionId}_p${i}`;
+            const wordHtml = makeWordSpans(w[0]);
+            const speakText = cleanForSpeech(w[0]);
+            return `<div class="pill" id="${id}" data-speak="${speakText}" onclick="playOne('${id}')"><span class="en">${wordHtml}</span><span class="tr">${w[1]}</span></div>`;
+        }).join('');
+    }
+
+    function makeRuleItem(icon, sectionId, index, speakText, arText, displayText) {
+        const id = `${sectionId}_${index}`;
+        const wordHtml = makeWordSpans(displayText || speakText);
+        const finalSpeak = cleanForSpeech(speakText);
+        return `<div class="rule-item" id="${id}" data-speak="${finalSpeak}" onclick="playOne('${id}')">
+            <span class="rule-icon">${icon}</span>
+            <div class="rule-text">
+                <span class="en">${wordHtml}</span>
+                <span class="ar">${arText || ''}</span>
+            </div>
+        </div>`;
+    }
+
+    function playBar(sectionId) {
+        return `<div class="sec-play-bar">
+            <button class="big-btn" style="background:linear-gradient(135deg,var(--A),var(--A2))" onclick="playSection('${sectionId}')">▶ Play</button>
+            <button class="big-btn pause-btn" onclick="pauseAll()">⏸ Pause</button>
+            <button class="big-btn stop-btn" onclick="stopAll()">⏹ Stop</button>
+        </div>`;
+    }
+
+    function makeStorySection(title, storyData) {
+        return `<div class="story-card">
+            <div style="font-weight:bold;color:var(--A);margin-bottom:12px;">${title}</div>
+            ${storyData.map((s,i) => {
+                const id = `secStory_${title.replace(/\s/g,'')}_${i}`;
+                let enText = s.en;
+                let isTitle = enText.startsWith('**');
+                let displayHtml = '';
+                let speakText = enText.replace(/\*\*/g, '');
+                
+                if(isTitle) {
+                    displayHtml = `<h3 style="color:var(--A2);margin-top:16px;margin-bottom:8px;border-bottom:1px solid var(--border);padding-bottom:4px;">${enText.replace(/\*\*/g, '')}</h3>`;
+                } else {
+                    const wordHtml = makeWordSpans(enText);
+                    displayHtml = `<span class="word">${wordHtml}</span>`;
+                }
+                
+                return `<div class="sentence" id="${id}" data-speak="${cleanForSpeech(speakText)}" onclick="playOne('${id}')">${displayHtml}</div>`;
+            }).join('')}
+            <div class="story-ar">${storyData.map(s => s.ar).join(' ')}</div>
+        </div>`;
+    }
+
+    let html = '';
+
+    // 1. New Vocabulary
+    html += `<div class="section-block" id="ch6Vocab">
+        <div class="sec-title">💊 Chapter 6 - New Vocabulary</div>
+        <div class="sec-body">
+            ${playBar('ch6Vocab')}
+            <div class="info-box"><div class="info-title">New Vocabulary</div><div class="vocab">${makePills(ch6Vocab, 'ch6Vocab')}</div></div>
+        </div>
+    </div>`;
+
+    // 2. Phrases, Expressions, Idioms & Prepositions
+    html += `<div class="section-block" id="ch6Phrases">
+        <div class="sec-title">💬 Chapter 6 - Phrases, Expressions, Idioms & Prepositions</div>
+        <div class="sec-body">
+            ${playBar('ch6Phrases')}
+            <div class="rules-grid">${ch6Phrases.map((e,i) => makeRuleItem('💡', 'ch6Phrases', i, e[0], e[1], e[0])).join('')}</div>
+        </div>
+    </div>`;
+
+    // 3. Chapter Text
+    html += `<div class="section-block" id="ch6Story">
+        <div class="sec-title">📖 Chapter 6 - Chapter Text</div>
+        <div class="sec-body">
+            ${playBar('ch6Story')}
+            ${makeStorySection('The Count of Monte Cristo - Chapter 6', ch6Story)}
+        </div>
+    </div>`;
+
+    container.innerHTML = html;
+}
+
+// ===================== نظام الصوت =====================
+const rateRange = document.getElementById('rateRange');
+const rateBadge = document.getElementById('rateBadge');
+const fabPause = document.getElementById('fabPause');
+
+const savedRate = localStorage.getItem('speechRate') || 1;
+rateRange.value = savedRate;
+rateBadge.textContent = parseFloat(savedRate).toFixed(1)+'x';
+rateRange.addEventListener('input', () => {
+    const val = parseFloat(rateRange.value).toFixed(1);
+    rateBadge.textContent = val+'x';
+    localStorage.setItem('speechRate', val);
+});
+
+let voices = [];
+function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+    populateVoiceSelect();
+}
+function populateVoiceSelect() {
+    const vs = document.getElementById('voiceSelect');
+    const note = document.getElementById('voiceNote');
+    const allVoices = voices;
+    if (!allVoices.length) return;
+    const normalizeLang = (lang) => lang.replace('_', '-');
+    const isLangMatch = (voiceLang, targetPrefix) => normalizeLang(voiceLang) === targetPrefix || normalizeLang(voiceLang).startsWith(targetPrefix + '-');
+    const usVoice = allVoices.find(v => isLangMatch(v.lang, 'en-US'));
+    const gbVoice = allVoices.find(v => isLangMatch(v.lang, 'en-GB'));
+    const options = [];
+    if (usVoice) options.push({ label: '🇺🇸 American', uri: usVoice.voiceURI });
+    if (gbVoice) options.push({ label: '🇬🇧 British', uri: gbVoice.voiceURI });
+    if (!options.length) {
+        note.textContent = '⚠️ No US/UK voice found.';
+        const anyEn = allVoices.filter(v => v.lang.startsWith('en')).slice(0,2);
+        anyEn.forEach(v => options.push({ label: v.name + ' ('+v.lang+')', uri: v.voiceURI }));
+    } else {
+        note.textContent = '';
+    }
+    const savedURI = localStorage.getItem('voiceURI');
+    vs.innerHTML = options.map(o => `<option value="${o.uri}">${o.label}</option>`).join('');
+    if (savedURI && options.some(o => o.uri === savedURI)) vs.value = savedURI;
+}
+document.getElementById('voiceSelect').addEventListener('change', function() {
+    localStorage.setItem('voiceURI', this.value);
+});
+
+function getSelectedVoice() {
+    const uri = localStorage.getItem('voiceURI');
+    return voices.find(v => v.voiceURI === uri) || null;
+}
+
+window._q = []; window._qi = 0;
+window._currentUtterance = null;
+let currentHighlightedId = null;
+
+function clearAllHighlights() {
+    document.querySelectorAll('.active-sent').forEach(e => e.classList.remove('active-sent'));
+    currentHighlightedId = null;
+}
+function showFab(show) { if (show) fabPause.classList.add('show'); else fabPause.classList.remove('show'); }
+function updateFabIcon() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) fabPause.innerHTML = '⏸️';
+    else if (window.speechSynthesis.paused) fabPause.innerHTML = '▶️';
+    else fabPause.innerHTML = '⏯️';
+}
+
+function playQueue() {
+    if (window._qi >= window._q.length) {
+        clearAllHighlights(); showFab(false); return;
+    }
+    const item = window._q[window._qi];
+    if (currentHighlightedId !== item.id) {
+        clearAllHighlights();
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add('active-sent');
+            el.scrollIntoView({behavior:'smooth',block:'nearest'});
+            currentHighlightedId = item.id;
+        }
+    }
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.rate = parseFloat(rateRange.value) || 1;
+    const voice = getSelectedVoice();
+    if (voice) u.voice = voice;
+
+    u.onstart = () => { showFab(true); updateFabIcon(); };
+    u.onend = function() { window._qi++; playQueue(); };
+    u.onerror = function(e) { console.warn('Speech error', e); window._qi++; playQueue(); };
+    u.onpause = () => updateFabIcon();
+    u.onresume = () => updateFabIcon();
+
+    window._currentUtterance = u;
+    window.speechSynthesis.speak(u);
+}
+
+function splitAndQueue(textParts, id) {
+    textParts.forEach((p) => { const trimmed = p.trim(); if (trimmed) window._q.push({id: id, text: trimmed}); });
+}
+
+function playSection(secId) {
+    stopAll();
+    const sec = document.getElementById(secId);
+    if(!sec) return;
+    const els = [...sec.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playAll() {
+    stopAll();
+    const els = [...document.querySelectorAll('[data-speak]')];
+    els.forEach(el => {
+        const text = el.dataset.speak;
+        const parts = text.split('|').map(p => p.trim());
+        splitAndQueue(parts, el.id);
+    });
+    window._qi = 0;
+    playQueue();
+}
+
+function playOne(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const text = el.dataset.speak;
+    stopAll();
+    const parts = text.split('|').map(p => p.trim());
+    splitAndQueue(parts, id);
+    window._qi = 0;
+    playQueue();
+}
+
+function pauseAll() {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+        window.speechSynthesis.pause(); updateFabIcon();
+    } else if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume(); updateFabIcon();
+    }
+}
+
+function stopAll() {
+    window._q = []; window._qi = 0;
+    clearAllHighlights();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    showFab(false);
+}
+
+function toggleFabPause() { pauseAll(); }
+
+// ===================== الثيمات =====================
+function setTheme(theme, btn) {
+    document.documentElement.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-btn').forEach(b => {
+    if (b.classList.contains('t-'+savedTheme)) b.classList.add('active');
+});
+
+// ===================== بدء التشغيل =====================
+buildAllSections();
+loadVoices();
+setTimeout(loadVoices, 300);
+setTimeout(loadVoices, 1000);
+if (speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>
